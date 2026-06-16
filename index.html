@@ -24,8 +24,6 @@
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/png" href="assets/images/logo.png">
 
-  <!-- model-viewer for 3D display -->
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -73,12 +71,11 @@
 
   <main id="main">
 
-    <!-- ====================================================================
-         HERO — Split Editorial Layout
-    ===================================================================== -->
+        <!-- ====================================================================
+          HERO — Full-Bleed Background Layout
+        ===================================================================== -->
     <section class="hero" aria-label="Hero — ANAVA Clinics">
 
-      <!-- Left panel: bone/white with content -->
       <div class="hero__left">
 
         <p class="hero__eyebrow" aria-hidden="true">Neurotherapy &amp; Neuromodulation</p>
@@ -92,56 +89,16 @@
           Safe, non-invasive neurotherapy designed for people who needed a different answer. Specialist-led care for treatment-resistant conditions across India and Europe.
         </p>
 
-        <div class="hero__mobile-model" aria-hidden="true">
-          <model-viewer
-            class="hero__brain-model"
-            src="./human_brain_pbr.glb"
-            ios-src="./Human_Brain.usdz"
-            alt="Human Brain 3D model"
-            ar
-            ar-modes="quick-look scene-viewer webxr"
-            auto-rotate
-            auto-rotate-delay="0"
-            rotation-per-second="10deg"
-            interaction-prompt="none"
-            shadow-intensity="0.25"
-            exposure="0.75"
-            environment-image="neutral"
-            tone-mapping="neutral"
-          ></model-viewer>
-        </div>
-
         <div class="hero__actions">
           <a href="contact.html" class="btn btn--primary btn--lg">
             Book a Consultation
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
-          <a href="treatments.html" class="btn btn--outline-pine">
+          <a href="treatments.html" class="btn btn--outline">
             Explore Treatments
           </a>
         </div>
 
-      </div>
-
-      <!-- Right panel: Human Brain 3D model -->
-      <div class="hero__right" aria-hidden="true">
-        <model-viewer
-          class="hero__brain-model"
-          src="./human_brain_pbr.glb"
-          ios-src="./Human_Brain.usdz"
-          alt="Human Brain 3D model"
-          ar
-          ar-modes="quick-look scene-viewer webxr"
-          auto-rotate
-          auto-rotate-delay="0"
-          rotation-per-second="10deg"
-          interaction-prompt="none"
-          shadow-intensity="0.25"
-          exposure="0.75"
-          environment-image="neutral"
-          tone-mapping="neutral"
-        ></model-viewer>
-        <div class="hero__right-accent"></div>
       </div>
 
     </section>

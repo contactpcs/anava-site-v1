@@ -244,95 +244,72 @@
    -------------------------------------------------------------------------- */
 
 /* -----------------------------------------------------------------------
-   Hero — Split Editorial Layout (58/42 grid)
+   Hero — Full-Bleed Background Layout
    ----------------------------------------------------------------------- */
 
 .hero {
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 58fr 42fr;
+  display: flex;
+  align-items: stretch;
   overflow: hidden;
   position: relative;
+  background:
+    linear-gradient(90deg, rgba(31,59,52,1) 0%, rgba(31,59,52,1) 60%, rgba(31,59,52,0) 100%),
+    url('../assets/images/hero.jpg') center center / cover no-repeat;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(31,59,52,0.92) 0%, rgba(31,59,52,0.88) 60%, rgba(31,59,52,0.04) 100%);
+  pointer-events: none;
 }
 
 .hero__left {
-  background: var(--bone);
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+  width: 100%;
+  max-width: 58%;
+  min-height: 100vh;
+  color: var(--bone);
   padding: calc(var(--nav-height) + var(--space-16)) var(--space-12) var(--space-16) max(var(--space-8), calc((100vw - 1280px) / 2 + var(--space-8)));
 }
 
-.hero__right {
+.hero__eyebrow,
+.hero__headline,
+.hero__subheadline,
+.hero__trust-item {
+  color: var(--bone);
+}
+
+.hero__headline em {
+  color: var(--brass);
+}
+
+.hero__subheadline {
+  color: rgba(244,241,234,0.88);
+}
+
+.hero__actions {
   position: relative;
-  background: transparent;
-  overflow: hidden;
-}
-
-.hero__right::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 12%;
-  z-index: 0;
-  width: min(42%, 320px);
-  height: 34px;
-  transform: translateX(-50%);
-  background: radial-gradient(ellipse at center, rgba(21,41,32,0.22) 0%, rgba(21,41,32,0.12) 38%, transparent 72%);
-  filter: blur(10px);
-  pointer-events: none;
-}
-
-.hero__brain-model {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   z-index: 1;
-  width: min(88%, 620px);
-  height: min(82%, 680px);
-  min-height: 420px;
-  transform: translate(-50%, -50%);
-  background-color: transparent;
-  --poster-color: transparent;
-  pointer-events: none;
 }
 
-.hero__mobile-model {
+.hero__trust {
+  border-top-color: rgba(244,241,234,0.18);
+}
+
+.hero__trust-item svg { color: var(--brass); flex-shrink: 0; }
+
+.hero__right,
+.hero__mobile-model,
+.hero__scroll-indicator {
   display: none;
-}
-
-.hero__right-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  opacity: 0.58;
-}
-
-.hero__right-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(21,41,32,0.45) 0%,
-    rgba(31,59,52,0.20) 50%,
-    rgba(21,41,32,0.62) 100%
-  );
-}
-
-.hero__right-accent {
-  position: absolute;
-  z-index: 2;
-  top: var(--space-10);
-  right: var(--space-8);
-  width: 72px;
-  height: 72px;
-  border-top: 2px solid rgba(185,138,62,0.60);
-  border-right: 2px solid rgba(185,138,62,0.60);
 }
 
 .hero__float-card {
@@ -440,21 +417,14 @@
   font-weight: 400;
   line-height: 1.07;
   letter-spacing: -0.015em;
-  color: var(--graphite);
   margin-bottom: var(--space-6);
   animation: fadeUp 0.7s ease 0.1s both;
-}
-
-.hero__headline em {
-  font-style: italic;
-  color: var(--deep-pine);
 }
 
 .hero__subheadline {
   font-size: 1.05rem;
   font-weight: 300;
   line-height: 1.75;
-  color: var(--color-text-muted);
   max-width: 500px;
   margin-bottom: var(--space-10);
   animation: fadeUp 0.7s ease 0.2s both;
@@ -490,18 +460,6 @@
 }
 
 .hero__trust-item svg { color: var(--brass); flex-shrink: 0; }
-
-.hero__scroll-indicator {
-  position: absolute;
-  bottom: var(--space-8);
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-3);
-  animation: fadeIn 2s ease 1.2s both;
-}
 
 .hero__scroll-text {
   font-size: 10px;

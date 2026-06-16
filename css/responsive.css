@@ -58,29 +58,15 @@
   .mobile-cta-bar { display: flex; }
   .footer { padding-bottom: 76px; }
 
-  /* Hero — collapse to stacked layout on tablet */
+  /* Hero */
   .hero {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto minmax(320px, 42vw);
     min-height: 0;
   }
-  .hero__right {
-    min-height: 320px;
-  }
   .hero__left {
-    padding: calc(var(--nav-height) + var(--space-12)) var(--space-8) var(--space-10) var(--space-8);
+    max-width: 100%;
     min-height: 56vh;
+    padding: calc(var(--nav-height) + var(--space-12)) var(--space-8) var(--space-10) var(--space-8);
   }
-  .hero__brain-model {
-    width: min(76%, 560px);
-    height: 100%;
-    min-height: 300px;
-  }
-  .hero__right::after {
-    bottom: 13%;
-    width: min(46%, 280px);
-  }
-  .hero__scroll-indicator { display: none; }
 }
 
 /* --------------------------------------------------------------------------
@@ -100,33 +86,7 @@
 
   .hero {
     display: block;
-  }
-
-  .hero__right {
-    display: none;
-  }
-
-  .hero__mobile-model {
-    display: block;
-    position: relative;
-    height: 300px;
-    margin: calc(var(--space-6) * -1) 0 var(--space-6);
-    overflow: hidden;
-    animation: fadeUp 0.7s ease 0.25s both;
-  }
-
-  .hero__mobile-model::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 12%;
-    z-index: 0;
-    width: min(58%, 280px);
-    height: 30px;
-    transform: translateX(-50%);
-    background: radial-gradient(ellipse at center, rgba(21,41,32,0.22) 0%, rgba(21,41,32,0.12) 38%, transparent 72%);
-    filter: blur(10px);
-    pointer-events: none;
+    min-height: 0;
   }
 
   /* Conditions grid */
@@ -207,29 +167,10 @@
 
   /* Hero — mobile */
   .hero__left {
+    max-width: 100%;
     padding: calc(var(--nav-height) + var(--space-8)) var(--space-5) var(--space-8) var(--space-5);
     min-height: 0;
   }
-  .hero__mobile-model {
-    height: 260px;
-    margin-top: calc(var(--space-4) * -1);
-  }
-  .hero__brain-model {
-    width: 86%;
-    min-height: 240px;
-  }
-  .hero__mobile-model::after {
-    bottom: 10%;
-    width: 58%;
-    height: 28px;
-  }
-  .hero__right-accent {
-    top: var(--space-5);
-    right: var(--space-5);
-    width: 44px;
-    height: 44px;
-  }
-  .hero__float-card { display: none; }
 
   .hero__actions {
     flex-direction: column;
