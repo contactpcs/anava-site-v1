@@ -1,0 +1,292 @@
+/* ==========================================================================
+   ANAVA CLINICS — Responsive
+   responsive.css — Breakpoints (mobile-first approach)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablet (< 1024px) — hide desktop nav, show toggle
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+
+  :root { --nav-height: 64px; }
+
+  .nav__links,
+  .nav__cta { display: none; }
+
+  .nav__toggle { display: flex; }
+
+  /* Founder */
+  .founder__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .founder__quote-float {
+    position: relative;
+    bottom: auto; right: auto;
+    max-width: 100%;
+    margin-top: var(--space-4);
+  }
+
+  .founder__frame-accent { display: none; }
+
+  /* Steps — wrap to 3 col */
+  .steps-track {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-8);
+  }
+
+  .steps-track::before { display: none; }
+
+  /* Journey */
+  .journey__item {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    direction: ltr !important;
+  }
+
+  .journey__item:nth-child(even) { direction: ltr; }
+
+  /* Footer */
+  .footer__main {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  /* Mobile CTA bar */
+  .mobile-cta-bar { display: flex; }
+  .footer { padding-bottom: 76px; }
+
+  /* Hero — collapse to stacked layout on tablet */
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 42vw;
+    min-height: 0;
+  }
+  .hero__left {
+    padding: calc(var(--nav-height) + var(--space-12)) var(--space-8) var(--space-10) var(--space-8);
+    min-height: 56vh;
+  }
+  .hero__left::after { display: none; }
+  .hero__scroll-indicator { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Small Tablet (< 768px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  :root {
+    --space-24: 4.5rem;
+    --space-32: 5.5rem;
+  }
+
+  /* Conditions grid */
+  .conditions__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Steps single column wrap */
+  .steps-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  /* Treatments */
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials */
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Clinics */
+  .clinics__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer__main {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__legal {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Form grid */
+  .form-grid { grid-template-columns: 1fr; }
+
+  /* Hero trust */
+  .hero__trust {
+    gap: var(--space-5);
+  }
+
+  .hero__trust-item { font-size: var(--text-xs); }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile (< 640px)
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 639px) {
+
+  :root {
+    --space-24: 3.5rem;
+    --space-32: 4.5rem;
+    --space-20: 3.5rem;
+  }
+
+  .container,
+  .container--narrow,
+  .container--wide {
+    padding: 0 var(--space-5);
+  }
+
+  /* Hero — mobile */
+  .hero { grid-template-rows: auto 38vw; }
+  .hero__left {
+    padding: calc(var(--nav-height) + var(--space-8)) var(--space-5) var(--space-8) var(--space-5);
+    min-height: 0;
+  }
+  .hero__float-card { display: none; }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero__trust { gap: var(--space-4); }
+
+  .hero__trust-item:last-child { display: none; }
+
+  /* Trust bar */
+  .trust-bar__inner {
+    justify-content: flex-start;
+    gap: var(--space-5);
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: var(--space-1);
+  }
+
+  .trust-bar__divider { display: none; }
+
+  /* Conditions */
+  .conditions__grid { grid-template-columns: 1fr; }
+
+  /* Steps */
+  .steps-track { grid-template-columns: 1fr; gap: var(--space-6); }
+
+  /* Journey */
+  .journey__spine { display: none; }
+  .journey__items { padding-left: 0; }
+  .journey__dot { display: none; }
+
+  .journey__num {
+    font-size: 4rem;
+  }
+
+  /* Final CTA */
+  .final-cta__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .final-cta__actions .btn { justify-content: center; }
+
+  /* Mobile CTA bar */
+  .mobile-cta-bar { display: flex; }
+
+  .mobile-cta-bar .btn {
+    flex: 1;
+    justify-content: center;
+    padding: var(--space-4) var(--space-4);
+    font-size: 11px;
+  }
+
+  .footer { padding-bottom: 72px; }
+
+  /* Page hero */
+  .page-hero__title { font-size: 2.5rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Large Desktop (> 1400px)
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1400px) {
+
+  :root {
+    --container-max: 1360px;
+  }
+
+  .hero__headline { font-size: 5.2rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Print
+   -------------------------------------------------------------------------- */
+
+@media print {
+
+  .nav,
+  .mobile-cta-bar,
+  .hero__scroll-indicator,
+  .final-cta,
+  .footer__social { display: none; }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .hero {
+    display: block;
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  .hero__right { display: none; }
+
+  .hero__headline { color: #000; font-size: 2rem; }
+}
