@@ -122,6 +122,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -134,6 +135,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  width: 100%;
 }
 
 img, video, svg { display: block; max-width: 100%; height: auto; }
@@ -175,9 +177,9 @@ p { line-height: var(--leading-relaxed); }
   padding: 0 var(--space-8);
 }
 
-.section       { padding: var(--space-24) 0; }
-.section--lg   { padding: var(--space-32) 0; }
-.section--sm   { padding: var(--space-16) 0; }
+.section       { padding: var(--space-24) 0; overflow-x: hidden; }
+.section--lg   { padding: var(--space-32) 0; overflow-x: hidden; }
+.section--sm   { padding: var(--space-16) 0; overflow-x: hidden; }
 
 /* --------------------------------------------------------------------------
    Typography Scale
