@@ -554,6 +554,38 @@
   background-color: rgba(244, 241, 234, 0.1);
 }
 
+/* Trust Bar Scrolling Variant */
+.trust-bar--scrolling {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(244, 241, 234, 0.2) transparent;
+}
+
+.trust-bar--scrolling::-webkit-scrollbar {
+  height: 4px;
+}
+
+.trust-bar--scrolling::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.trust-bar--scrolling::-webkit-scrollbar-thumb {
+  background-color: rgba(244, 241, 234, 0.2);
+  border-radius: 2px;
+}
+
+.trust-bar__scroll-container {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-8);
+  flex-wrap: nowrap;
+  min-width: min-content;
+  padding-right: var(--space-12);
+}
+
 /* --------------------------------------------------------------------------
    Founder Section
    -------------------------------------------------------------------------- */
