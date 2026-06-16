@@ -139,10 +139,36 @@
       if (!isActive) card.classList.add('active');
     });
 
-    // Keyboard support
     card.setAttribute('tabindex', '0');
     card.setAttribute('role', 'button');
     card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
+
+  /* -------------------------------------------------------------------------
+     Clinic Cards — accordion expand on mobile
+  -------------------------------------------------------------------------- */
+
+  var clinicCards = document.querySelectorAll('.clinic-card');
+
+  clinicCards.forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      // On desktop (> 767px) don't intercept — let links work normally
+      if (window.innerWidth > 767) return;
+      // If clicking a link inside an already-active card, let it navigate
+      if (e.target.closest('a') && card.classList.contains('active')) return;
+      e.preventDefault();
+      var isActive = card.classList.contains('active');
+      clinicCards.forEach(function (c) { c.classList.remove('active'); });
+      if (!isActive) card.classList.add('active');
+    });
+
+    card.addEventListener('keydown', function (e) {
+      if (window.innerWidth > 767) return;
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         card.click();

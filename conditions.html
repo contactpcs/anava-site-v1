@@ -11,6 +11,31 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <style>
+    /* ---- Conditions page — mobile responsive ---- */
+    .cond-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-20);
+      align-items: start;
+    }
+    @media (max-width: 767px) {
+      .cond-row {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-8) !important;
+      }
+      /* Improve image visibility on mobile */
+      .cond-row .img-fill { opacity: 0.65 !important; }
+      .cond-img-wrap .img-fill { opacity: 0.65 !important; }
+      /* Stat block full width on mobile */
+      .cond-stat { width: 100%; }
+      /* Further conditions grid */
+      .grid-3 { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 479px) {
+      .cond-row { gap: var(--space-6) !important; }
+    }
+  </style>
 </head>
 <body>
 
@@ -30,7 +55,7 @@
         <li><a href="contact.html" class="nav__link">Contact</a></li>
       </ul>
       <a href="contact.html" class="nav__cta">Book Consultation</a>
-      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="nav__toggle-line"></span>
         <span class="nav__toggle-line"></span>
         <span class="nav__toggle-line"></span>
@@ -38,7 +63,7 @@
     </div>
   </nav>
 
-  <div class="nav__mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
     <a href="about.html" class="nav__mobile-link">Our Story</a>
     <a href="conditions.html" class="nav__mobile-link">Conditions</a>
     <a href="treatments.html" class="nav__mobile-link">Treatments</a>
@@ -65,7 +90,7 @@
     <!-- Depression -->
     <section class="section section--lg bg-bone" id="depression" aria-labelledby="depression-title">
       <div class="container">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-20); align-items:start;">
+        <div class="cond-row">
           <div>
             <p class="section-label reveal">01</p>
             <h2 style="font-size:clamp(2rem,4vw,var(--text-4xl)); color:var(--deep-pine); margin-bottom:var(--space-5); font-weight:300; line-height:1.15;" class="reveal reveal-delay-1" id="depression-title">
@@ -105,12 +130,12 @@
                 alt="TMS neurotherapy — primary treatment for treatment-resistant depression"
                 loading="lazy"
                 class="img-fill"
-                style="opacity:0.28;"
+                style="opacity:0.55;"
               >
-              <div class="img-overlay" style="background:linear-gradient(160deg, rgba(21,41,32,0.88) 0%, rgba(31,59,52,0.92) 100%);"></div>
+              <div class="img-overlay" style="background:linear-gradient(160deg, rgba(21,41,32,0.55) 0%, rgba(31,59,52,0.75) 100%);"></div>
               <div style="position:relative; z-index:2; padding:var(--space-8);">
                 <p style="font-family:var(--font-display); font-size:var(--text-5xl); font-weight:200; color:var(--bone); line-height:1; margin-bottom:var(--space-2);">~<span style="color:var(--brass);">68%</span></p>
-                <p style="font-size:var(--text-sm); color:rgba(244,241,234,0.5); line-height:var(--leading-relaxed);">Response rate in TRD with TMS, based on published meta-analyses. Individual results vary.</p>
+                <p style="font-size:var(--text-sm); color:rgba(244,241,234,0.75); line-height:var(--leading-relaxed);">Response rate in TRD with TMS, based on published meta-analyses. Individual results vary.</p>
               </div>
             </div>
           </div>
@@ -121,16 +146,16 @@
     <!-- Chronic Pain -->
     <section class="section section--lg bg-surface" id="pain" aria-labelledby="pain-title">
       <div class="container">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-20); align-items:start;">
+        <div class="cond-row">
           <div class="reveal reveal-delay-1" style="background:var(--deep-pine); padding:0; aspect-ratio:4/5; position:relative; overflow:hidden;">
             <img
               src="https://images.unsplash.com/photo-1493894473891-10fc1e5dbd22?auto=format&fit=crop&w=900&q=80"
               alt="Person experiencing chronic pain — neurotherapy offers a new treatment pathway"
               loading="lazy"
               class="img-fill"
-              style="opacity:0.4;"
+              style="opacity:0.72;"
             >
-            <div class="img-overlay" style="background:linear-gradient(180deg, rgba(21,41,32,0.45) 0%, rgba(21,41,32,0.85) 100%);"></div>
+            <div class="img-overlay" style="background:linear-gradient(180deg, rgba(21,41,32,0.18) 0%, rgba(21,41,32,0.62) 100%);"></div>
             <div style="position:relative; z-index:2; padding:var(--space-10); height:100%; display:flex; flex-direction:column; justify-content:flex-end;">
               <p style="font-family:var(--font-display); font-size:var(--text-2xl); font-weight:300; color:var(--bone); line-height:1.2; font-style:italic;">"The pain that persists is not a character flaw. It is a neurological pattern."</p>
             </div>
@@ -158,7 +183,7 @@
     <!-- Stroke Recovery -->
     <section class="section section--lg bg-bone" id="stroke" aria-labelledby="stroke-title">
       <div class="container">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-20); align-items:start;">
+        <div class="cond-row">
           <div>
             <p class="section-label reveal">03</p>
             <h2 style="font-size:clamp(2rem,4vw,var(--text-4xl)); color:var(--deep-pine); margin-bottom:var(--space-5); font-weight:300; line-height:1.15;" class="reveal reveal-delay-1" id="stroke-title">
@@ -181,9 +206,9 @@
               alt="Neurotherapy session supporting stroke rehabilitation and neuroplasticity"
               loading="lazy"
               class="img-fill"
-              style="opacity:0.45;"
+              style="opacity:0.78;"
             >
-            <div class="img-overlay" style="background:linear-gradient(180deg, rgba(21,41,32,0.3) 0%, rgba(21,41,32,0.68) 100%);"></div>
+            <div class="img-overlay" style="background:linear-gradient(180deg, rgba(21,41,32,0.15) 0%, rgba(21,41,32,0.5) 100%);"></div>
           </div>
           <div class="reveal reveal-delay-2" style="background:var(--white); border:1px solid var(--color-border); padding:var(--space-8);">
             <h3 style="font-family:var(--font-display); font-size:var(--text-xl); color:var(--deep-pine); margin-bottom:var(--space-6);">Recovery domains supported</h3>

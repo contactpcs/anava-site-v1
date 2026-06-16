@@ -873,6 +873,11 @@
 }
 .condition-card.active .condition-card__detail { display: block; }
 
+/* Expand indicator — hidden on desktop, shown via responsive.css on mobile */
+.condition-card__expand {
+  display: none;
+}
+
 .condition-card__cta {
   display: inline-flex;
   align-items: center;
@@ -1509,6 +1514,9 @@
   padding: 3px var(--space-3);
 }
 
+/* Expand indicator — hidden on desktop, shown via responsive.css on mobile */
+.clinic-card__expand { display: none; }
+
 .clinic-card__body {
   padding: var(--space-8);
   background-color: var(--bone);
@@ -1755,6 +1763,8 @@
 .footer__logo img {
   height: 44px; width: auto;
   object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
 }
 
 .footer__logo-text {
