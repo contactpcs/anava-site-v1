@@ -24,7 +24,7 @@
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/png" href="assets/images/logo.png">
 
-  <!-- model-viewer for USDZ/3D display -->
+  <!-- model-viewer for 3D display -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
@@ -92,6 +92,25 @@
           Safe, non-invasive neurotherapy designed for people who needed a different answer. Specialist-led care for treatment-resistant conditions across India and Europe.
         </p>
 
+        <div class="hero__mobile-model" aria-hidden="true">
+          <model-viewer
+            class="hero__brain-model"
+            src="./human_brain_pbr.glb"
+            ios-src="./Human_Brain.usdz"
+            alt="Human Brain 3D model"
+            ar
+            ar-modes="quick-look scene-viewer webxr"
+            auto-rotate
+            auto-rotate-delay="0"
+            rotation-per-second="10deg"
+            interaction-prompt="none"
+            shadow-intensity="0.25"
+            exposure="0.75"
+            environment-image="neutral"
+            tone-mapping="neutral"
+          ></model-viewer>
+        </div>
+
         <div class="hero__actions">
           <a href="contact.html" class="btn btn--primary btn--lg">
             Book a Consultation
@@ -131,14 +150,20 @@
       <!-- Right panel: Human Brain 3D model -->
       <div class="hero__right" aria-hidden="true">
         <model-viewer
-          src="Human_Brain.usdz"
+          class="hero__brain-model"
+          src="./human_brain_pbr.glb"
+          ios-src="./Human_Brain.usdz"
           alt="Human Brain 3D model"
+          ar
+          ar-modes="quick-look scene-viewer webxr"
           auto-rotate
           auto-rotate-delay="0"
           rotation-per-second="10deg"
-          shadow-intensity="0"
-          exposure="1.1"
-          style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:75%; height:75%; background-color:transparent; --poster-color:transparent;"
+          interaction-prompt="none"
+          shadow-intensity="0.25"
+          exposure="0.75"
+          environment-image="neutral"
+          tone-mapping="neutral"
         ></model-viewer>
         <div class="hero__right-accent"></div>
       </div>

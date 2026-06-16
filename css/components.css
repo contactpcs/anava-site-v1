@@ -264,21 +264,42 @@
   padding: calc(var(--nav-height) + var(--space-16)) var(--space-12) var(--space-16) max(var(--space-8), calc((100vw - 1280px) / 2 + var(--space-8)));
 }
 
-.hero__left::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 18%;
-  bottom: 18%;
-  width: 1px;
-  background: linear-gradient(180deg, transparent 0%, var(--brass) 35%, var(--brass) 65%, transparent 100%);
-  opacity: 0.35;
-}
-
 .hero__right {
   position: relative;
-  background: var(--deep-pine-dark);
+  background: transparent;
   overflow: hidden;
+}
+
+.hero__right::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  z-index: 0;
+  width: min(42%, 320px);
+  height: 34px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse at center, rgba(21,41,32,0.22) 0%, rgba(21,41,32,0.12) 38%, transparent 72%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.hero__brain-model {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: min(88%, 620px);
+  height: min(82%, 680px);
+  min-height: 420px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  --poster-color: transparent;
+  pointer-events: none;
+}
+
+.hero__mobile-model {
+  display: none;
 }
 
 .hero__right-img {
@@ -305,6 +326,7 @@
 
 .hero__right-accent {
   position: absolute;
+  z-index: 2;
   top: var(--space-10);
   right: var(--space-8);
   width: 72px;
