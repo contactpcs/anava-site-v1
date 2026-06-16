@@ -43,6 +43,7 @@
     document.body.style.overflow = 'hidden';
     if (toggleLines.length === 3) {
       toggleLines[0].style.transform = 'translateY(7.5px) rotate(45deg)';
+      toggleLines[1].style.transform = 'scaleX(0)';
       toggleLines[1].style.opacity = '0';
       toggleLines[2].style.transform = 'translateY(-7.5px) rotate(-45deg)';
     }
@@ -54,6 +55,7 @@
     document.body.style.overflow = '';
     if (toggleLines.length === 3) {
       toggleLines[0].style.transform = '';
+      toggleLines[1].style.transform = '';
       toggleLines[1].style.opacity = '';
       toggleLines[2].style.transform = '';
     }

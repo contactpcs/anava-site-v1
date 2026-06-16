@@ -156,17 +156,27 @@
 .nav__toggle {
   display: none;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   cursor: pointer;
-  padding: var(--space-10);
-  background: none;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: none;
+  border-radius: var(--radius-sm);
   z-index: 10;
+  transition: background var(--transition-base);
+}
+
+.nav--scrolled .nav__toggle {
+  background: rgba(45, 45, 45, 0.08);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .nav__toggle-line {
   display: block;
-  width: 26px; height: 1.5px;
+  width: 22px; height: 1.5px;
   background-color: var(--white);
   transform-origin: center;
   transition: transform var(--transition-base), opacity var(--transition-base);

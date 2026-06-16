@@ -188,7 +188,7 @@
     min-height: 100dvh;
     position: relative;
     background:
-      linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.88) 35%, rgba(0,0,0,0.65) 35%, rgba(0,0,0,0) 50%),
+      linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0) 65%),
       url('../assets/images/hero.jpg') center center / cover no-repeat;
   }
 
