@@ -12,10 +12,12 @@
   -------------------------------------------------------------------------- */
 
   var nav = document.querySelector('.nav');
+  var hero = document.querySelector('.hero');
 
   function updateNavState() {
     if (!nav) return;
-    if (window.scrollY > 60) {
+    var threshold = hero ? hero.offsetHeight : 60;
+    if (window.scrollY >= threshold) {
       nav.classList.add('nav--scrolled');
       nav.classList.remove('nav--transparent');
     } else {
