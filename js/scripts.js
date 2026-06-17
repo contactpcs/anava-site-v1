@@ -252,7 +252,7 @@
   });
 
   /* -------------------------------------------------------------------------
-     Contact Form — basic validation + submit feedback
+     Contact Form — validation + EmailJS submission
   -------------------------------------------------------------------------- */
 
   var contactForm = document.querySelector('.contact-form');
@@ -278,19 +278,51 @@
         }
       }
 
-      if (valid) {
-        var submitBtn = contactForm.querySelector('[type="submit"]');
-        if (submitBtn) {
-          var orig = submitBtn.textContent;
-          submitBtn.textContent = 'Message sent — we\'ll be in touch soon';
-          submitBtn.disabled = true;
-          setTimeout(function () {
-            submitBtn.textContent = orig;
-            submitBtn.disabled = false;
-            contactForm.reset();
-          }, 5000);
-        }
+      if (!valid) return;
+
+      var submitBtn = contactForm.querySelector('[type="submit"]');
+      var origText = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) {
+        submitBtn.textContent = 'Sending…';
+        submitBtn.disabled = true;
       }
+
+      var firstName = contactForm.querySelector('#first-name');
+      var lastName  = contactForm.querySelector('#last-name');
+      var fullName  = (firstName ? firstName.value.trim() : '') + ' ' + (lastName ? lastName.value.trim() : '');
+
+      var templateParams = {
+        from_name : fullName.trim(),
+        from_email: emailField ? emailField.value.trim() : '',
+        phone     : (contactForm.querySelector('#phone')     || {}).value || 'Not provided',
+        condition : (contactForm.querySelector('#condition') || {}).value || 'Not specified',
+        location  : (contactForm.querySelector('#location')  || {}).value || 'Not specified',
+        message   : (contactForm.querySelector('#message')   || {}).value || 'No message provided'
+      };
+
+      emailjs.send('service_8ult84j', 'template_rf4848u', templateParams)
+        .then(function () {
+          if (submitBtn) {
+            submitBtn.textContent = 'Enquiry sent — we\'ll be in touch soon';
+          }
+          contactForm.reset();
+          setTimeout(function () {
+            if (submitBtn) {
+              submitBtn.textContent = origText;
+              submitBtn.disabled = false;
+            }
+          }, 6000);
+        })
+        .catch(function (err) {
+          console.error('EmailJS error:', err);
+          if (submitBtn) {
+            submitBtn.textContent = 'Something went wrong — please email us directly';
+            submitBtn.disabled = false;
+            setTimeout(function () {
+              submitBtn.textContent = origText;
+            }, 5000);
+          }
+        });
     });
   }
 
