@@ -48,6 +48,12 @@
     gap: var(--space-8);
   }
 
+  /* Treatment detail sections (tDCS/tVNS/TMS/TPS) */
+  .treatment-split {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-10) !important;
+  }
+
   .founder__quote-float {
     position: relative;
     bottom: auto; right: auto;
