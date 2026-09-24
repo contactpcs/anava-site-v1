@@ -42,6 +42,12 @@
     gap: var(--space-12);
   }
 
+  /* Co-founder / doctor card grids */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
   .founder__quote-float {
     position: relative;
     bottom: auto; right: auto;
@@ -462,6 +468,20 @@
 
   /* Page hero */
   .page-hero__title { font-size: 2.5rem; }
+
+  /* Co-founder cards — stack avatar above bio on narrow phones */
+  .cofounder-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: var(--space-4);
+    padding: var(--space-6);
+  }
+
+  .cofounder-card__avatar {
+    width: 72px;
+    height: 72px;
+  }
 }
 
 /* --------------------------------------------------------------------------
