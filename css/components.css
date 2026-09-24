@@ -1335,7 +1335,7 @@
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
   background-color: rgba(244,241,234,0.06);
   margin-bottom: var(--space-12);

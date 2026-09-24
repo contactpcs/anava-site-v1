@@ -49,7 +49,7 @@
   }
 
   /* Treatment detail sections (tDCS/tVNS/TMS/TPS) */
-  .treatment-split {
+  .split-grid {
     grid-template-columns: 1fr !important;
     gap: var(--space-10) !important;
   }
