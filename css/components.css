@@ -788,11 +788,36 @@
 
 .cofounder-card__body { min-width: 0; }
 
+.cofounder-card__name-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
 .cofounder-card__name {
   font-family: var(--font-display);
   font-size: var(--text-xl);
   color: var(--deep-pine);
-  margin-bottom: var(--space-1);
+}
+
+.cofounder-card__linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: var(--deep-pine);
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+  transition: background-color var(--transition-base), color var(--transition-base), border-color var(--transition-base);
+}
+
+.cofounder-card__linkedin:hover {
+  background-color: var(--brass);
+  border-color: var(--brass);
+  color: var(--white);
 }
 
 .cofounder-card__role {
@@ -993,7 +1018,7 @@
 
 .steps-track {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   position: relative;
 }
 
@@ -1002,8 +1027,8 @@
   content: '';
   position: absolute;
   top: 32px;
-  left: calc(10% + 16px);
-  right: calc(10% + 16px);
+  left: calc(12.5% + 32px);
+  right: calc(12.5% + 32px);
   height: 1px;
   background: linear-gradient(90deg, var(--brass), rgba(185,138,62,0.15));
   z-index: 0;

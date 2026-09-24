@@ -54,6 +54,11 @@
     gap: var(--space-10) !important;
   }
 
+  /* Safety/approach icon grid — 2 columns on tablet */
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .founder__quote-float {
     position: relative;
     bottom: auto; right: auto;
@@ -223,6 +228,11 @@
 
   /* Treatments */
   .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Safety/approach icon grid — single column on narrow mobile */
+  .grid-4 {
     grid-template-columns: 1fr;
   }
 
@@ -474,6 +484,16 @@
 
   /* Page hero */
   .page-hero__title { font-size: 2.5rem; }
+
+  /* Treatment detail visuals (tDCS/tVNS/TMS/TPS) — cap height on mobile */
+  .treatment-visual {
+    aspect-ratio: auto !important;
+    height: 220px;
+  }
+
+  .treatment-watermark {
+    font-size: 4rem !important;
+  }
 
   /* Co-founder cards — stack avatar above bio on narrow phones */
   .cofounder-card {
