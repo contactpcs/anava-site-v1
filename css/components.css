@@ -969,75 +969,72 @@
 }
 .condition-card__cta:hover { gap: var(--space-3); }
 
-/* Additional conditions — compact chip grid */
+/* Conditions — primary tiles + secondary list */
 
-.cond-more {
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--space-12);
+.conditions__primary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.condition-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-4);
+  min-height: 200px;
+  padding: var(--space-10) var(--space-6);
+  background-color: var(--bone);
+  border: 1px solid var(--color-border);
+  border-bottom: 2px solid var(--brass);
+  transition: background-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.condition-tile:hover {
+  background-color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.condition-tile__icon {
+  color: var(--brass);
+  line-height: 0;
+}
+
+.condition-tile__name {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-lg), 2.2vw, var(--text-2xl));
+  font-weight: 400;
+  color: var(--deep-pine);
+  line-height: var(--leading-snug);
+}
+
+.conditions__secondary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
   margin-bottom: var(--space-12);
 }
 
-.cond-more__header {
-  max-width: 660px;
-  margin-bottom: var(--space-8);
-}
-
-.cond-more__title {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);
-  font-weight: 400;
-  color: var(--deep-pine);
-  margin-bottom: var(--space-3);
-}
-
-.cond-more__subtitle {
+.condition-mini {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  font-weight: 300;
-  line-height: var(--leading-relaxed);
-}
-
-.cond-more__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-3);
-}
-
-.cond-chip {
+  font-weight: 500;
+  color: var(--deep-pine);
   background-color: var(--bone);
   border: 1px solid var(--color-border);
-  border-left: 2px solid var(--brass);
-  padding: var(--space-5);
-  min-width: 0;
-  transition: background-color var(--transition-base), border-left-color var(--transition-base), transform var(--transition-base);
+  padding: var(--space-3) var(--space-6);
+  transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
 }
 
-.cond-chip:hover {
-  background-color: var(--white);
-  border-left-color: var(--clay);
-  transform: translateY(-2px);
+.condition-mini:hover {
+  background-color: var(--deep-pine);
+  border-color: var(--deep-pine);
+  color: var(--bone);
 }
-
-.cond-chip__name {
-  display: block;
-  font-family: var(--font-display);
-  font-size: var(--text-base);
-  color: var(--deep-pine);
-  line-height: var(--leading-snug);
-  margin-bottom: var(--space-2);
-}
-
-.cond-chip__note {
-  display: block;
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  font-weight: 300;
-  line-height: var(--leading-normal);
-}
-
-.cond-chip--d1 { transition-delay: 0.05s; }
-.cond-chip--d2 { transition-delay: 0.1s; }
-.cond-chip--d3 { transition-delay: 0.15s; }
 
 .conditions__cta { text-align: center; }
 
@@ -1618,6 +1615,21 @@
   gap: var(--space-8);
 }
 
+/* Single-clinic state — one narrower card, centred in the section */
+.clinics__grid--single {
+  grid-template-columns: minmax(0, 420px);
+  justify-content: center;
+}
+
+.clinics__header--center {
+  text-align: center;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clinics__header--center .section-label { justify-content: center; }
+
 .clinic-card {
   border: 1px solid var(--color-border);
   overflow: hidden;
@@ -1630,7 +1642,7 @@
 }
 
 .clinic-card__image {
-  height: 240px;
+  height: 200px;
   background: linear-gradient(135deg, var(--deep-pine) 0%, var(--deep-pine-light) 55%, rgba(185,138,62,0.1) 100%);
   position: relative;
   display: flex;
@@ -1665,13 +1677,13 @@
 .clinic-card__expand { display: none; }
 
 .clinic-card__body {
-  padding: var(--space-8);
+  padding: var(--space-6);
   background-color: var(--bone);
 }
 
 .clinic-card__name {
   font-family: var(--font-display);
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   font-weight: 400;
   color: var(--deep-pine);
   margin-bottom: var(--space-1);
@@ -1683,7 +1695,7 @@
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
   color: var(--brass);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
   display: block;
 }
 
@@ -1709,7 +1721,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
-  padding-top: var(--space-6);
+  padding-top: var(--space-5);
   border-top: 1px solid var(--color-border);
 }
 
