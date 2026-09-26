@@ -11,6 +11,29 @@
 
   :root { --nav-height: 64px; }
 
+  /* Additional conditions — 2 across on tablet */
+  .cond-more__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Platform — stack rows, visual below copy */
+  .pf-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .pf-row--rev .pf-row__content,
+  .pf-row--rev .pf-row__visual { order: 0; }
+
+  .platform__rows { gap: var(--space-16); }
+  .platform__header { margin-bottom: var(--space-12); }
+
+  /* Devices — stack copy above certificate grid */
+  .devices__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
   .nav__links,
   .nav__cta { display: none; }
 
@@ -404,6 +427,83 @@
     --space-20: 3.5rem;
   }
 
+  /* Additional conditions — single column on phones */
+  .cond-more__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Platform — compress mockups for small screens */
+  .platform__rows { gap: var(--space-12); }
+
+  .pf-screen__body {
+    padding: var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .pf-stats,
+  .pf-gauges {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .pf-stat,
+  .pf-gauge {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-3);
+    text-align: left;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .pf-stat__num,
+  .pf-gauge__val { margin-bottom: 0; }
+
+  .pf-cards { grid-template-columns: 1fr; }
+
+  .pf-suggest {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  .pf-suggest__body { flex-basis: 100%; order: 3; }
+
+  .pf-float {
+    position: static;
+    display: inline-block;
+    margin-top: var(--space-4);
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .pf-tag { white-space: normal; }
+
+  .pf-chart svg { height: 90px; }
+
+  /* Devices — single column certificates */
+  .devices__certs { grid-template-columns: 1fr; }
+  .cert-card--wide { grid-column: auto; }
+
+  /* People — stack doctor cards */
+  .doctor-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .doctor-card__avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .cond-more {
+    padding-top: var(--space-10);
+  }
+
+  .cond-chip {
+    padding: var(--space-4) var(--space-5);
+  }
+
   .container,
   .container--narrow,
   .container--wide {
@@ -569,6 +669,10 @@
    -------------------------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
+
+  .pf-row__visual:hover .pf-screen { transform: none; }
+  .cond-chip:hover { transform: none; }
+
 
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
