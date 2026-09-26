@@ -11,9 +11,10 @@
 
   :root { --nav-height: 64px; }
 
-  /* Additional conditions — 2 across on tablet */
-  .cond-more__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* Conditions — tighten primary tiles on tablet */
+  .condition-tile {
+    min-height: 170px;
+    padding: var(--space-8) var(--space-4);
   }
 
   /* Platform — stack rows, visual below copy */
@@ -427,9 +428,19 @@
     --space-20: 3.5rem;
   }
 
-  /* Additional conditions — single column on phones */
-  .cond-more__grid {
+  /* Conditions — single column tiles on phones */
+  .conditions__primary {
     grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .condition-tile {
+    min-height: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: var(--space-5);
+    padding: var(--space-5) var(--space-6);
   }
 
   /* Platform — compress mockups for small screens */
@@ -496,12 +507,8 @@
     height: 72px;
   }
 
-  .cond-more {
-    padding-top: var(--space-10);
-  }
-
-  .cond-chip {
-    padding: var(--space-4) var(--space-5);
+  .condition-mini {
+    padding: var(--space-3) var(--space-5);
   }
 
   .container,
@@ -671,7 +678,7 @@
 @media (prefers-reduced-motion: reduce) {
 
   .pf-row__visual:hover .pf-screen { transform: none; }
-  .cond-chip:hover { transform: none; }
+  .condition-tile:hover { transform: none; }
 
 
   *, *::before, *::after {
