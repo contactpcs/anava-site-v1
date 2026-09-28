@@ -331,9 +331,41 @@
   overflow: hidden;
 }
 
+/* Silk texture background.
+
+   The asset is already flattened towards bone when it is generated, and it is
+   laid under a bone veil here as well, so the texture reads as a whisper of
+   movement behind the copy rather than as a photograph competing with it.
+   Kept on a pseudo-element so the veil never tints the content above it. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(to right, rgba(244, 241, 234, 0.94) 0%, rgba(244, 241, 234, 0.80) 45%, rgba(244, 241, 234, 0.62) 100%),
+    url('../assets/images/hero-texture.jpg');
+  background-size: auto, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  pointer-events: none;
+}
+
+/* Fade the texture out into the flat bone above and below, so there is no
+   hard seam against the nav or the trust bar. */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(to bottom, var(--bone) 0%, rgba(244, 241, 234, 0) 22%, rgba(244, 241, 234, 0) 80%, var(--bone) 100%);
+  pointer-events: none;
+}
+
 /* Soft sage bloom behind the visual, echoing the logo's arcs. */
 .hero__glow {
   position: absolute;
+  z-index: 0;
   top: -22rem;
   right: -16rem;
   width: 46rem;

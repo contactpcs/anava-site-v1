@@ -594,6 +594,14 @@
     padding: calc(var(--nav-height) + var(--space-10)) 0 var(--space-12);
   }
 
+  /* Portrait crop of the texture, and a flatter veil: on a narrow screen the
+     copy sits directly over the background rather than beside it. */
+  .hero::before {
+    background-image:
+      linear-gradient(to bottom, rgba(244, 241, 234, 0.93) 0%, rgba(244, 241, 234, 0.86) 55%, rgba(244, 241, 234, 0.74) 100%),
+      url('../assets/images/hero-texture-mobile.jpg');
+  }
+
   .hero__glow {
     top: -16rem;
     right: -12rem;
