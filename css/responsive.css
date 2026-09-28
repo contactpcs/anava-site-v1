@@ -600,7 +600,7 @@
      copy sits directly over the background rather than beside it. */
   .hero::before {
     background-image:
-      linear-gradient(to bottom, rgba(244, 241, 234, 0.93) 0%, rgba(244, 241, 234, 0.86) 55%, rgba(244, 241, 234, 0.74) 100%),
+      linear-gradient(to bottom, rgba(244, 241, 234, 0.78) 0%, rgba(244, 241, 234, 0.60) 50%, rgba(244, 241, 234, 0.34) 100%),
       url('../assets/images/hero-texture-mobile.jpg');
   }
 

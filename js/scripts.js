@@ -31,6 +31,33 @@
   updateNavState();
 
   /* -------------------------------------------------------------------------
+     Mobile sticky CTA bar
+
+     The hero carries its own "Book a Consultation" button, so showing the
+     sticky bar at the same time repeats it and takes over the first screen.
+     Keep the bar out of the way until the hero has scrolled past.
+  -------------------------------------------------------------------------- */
+
+  var ctaBar = document.querySelector('.mobile-cta-bar');
+  var heroSection = document.querySelector('.hero');
+
+  if (ctaBar && heroSection) {
+    var updateCtaBar = function () {
+      /* Reveal once the hero is mostly out of view. */
+      var heroBottom = heroSection.getBoundingClientRect().bottom;
+      if (heroBottom > 120) {
+        ctaBar.classList.add('mobile-cta-bar--hidden');
+      } else {
+        ctaBar.classList.remove('mobile-cta-bar--hidden');
+      }
+    };
+
+    window.addEventListener('scroll', updateCtaBar, { passive: true });
+    window.addEventListener('resize', updateCtaBar, { passive: true });
+    updateCtaBar();
+  }
+
+  /* -------------------------------------------------------------------------
      Mobile Menu
   -------------------------------------------------------------------------- */
 

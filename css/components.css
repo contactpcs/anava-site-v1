@@ -437,7 +437,10 @@
   font-size: var(--text-lg);
   font-weight: 300;
   line-height: var(--leading-relaxed);
-  color: var(--color-text-muted);
+  /* A step darker than the site-wide muted grey: the hero text sits over the
+     silk texture, where that grey falls just below AA. Scoped to the hero so
+     body copy elsewhere is unaffected. */
+  color: #5c5c5c;
   margin-bottom: var(--space-8);
   animation: heroRise 0.7s ease 0.16s both;
 }
@@ -473,7 +476,7 @@
   gap: var(--space-2);
   font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--color-text-muted);
+  color: #5c5c5c;
 }
 
 .hero__trust-item svg {
@@ -2169,6 +2172,16 @@
   box-shadow: 0 -4px 20px rgba(21,41,32,0.35);
   gap: var(--space-3);
   border-top: 1px solid rgba(185,138,62,0.2);
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+/* While the hero is on screen its own buttons are already there, so the
+   sticky bar would repeat them and dominate the first view. Tuck it away
+   until the visitor has scrolled past the hero. */
+.mobile-cta-bar--hidden {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* --------------------------------------------------------------------------
