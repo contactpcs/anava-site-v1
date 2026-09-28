@@ -7,6 +7,22 @@
    Tablet (< 1024px) — hide desktop nav, show toggle
    -------------------------------------------------------------------------- */
 
+/* --------------------------------------------------------------------------
+   Navigation — tighten link spacing before the hamburger takes over.
+   Six primary links plus the CTA is a snug fit between 1024px and ~1200px,
+   so the gap closes up slightly in that band rather than risking an overlap.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 1200px) and (min-width: 1024px) {
+  .nav__links {
+    gap: var(--space-5);
+  }
+
+  .nav__cta {
+    padding: var(--space-3) var(--space-5);
+  }
+}
+
 @media (max-width: 1023px) {
   :root { --nav-height: 64px; }
 
@@ -39,6 +55,21 @@
     gap: var(--space-10);
   }
 
+  /* Eligibility check — stack the intro above the supporting facts */
+  .checkup__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* Corporate — single column of problems, then responses */
+  .corporate__body {
+    gap: var(--space-10);
+  }
+
+  .corporate__outcomes {
+    padding: var(--space-8);
+  }
+
   .nav__links,
   .nav__cta { display: none; }
 
@@ -54,7 +85,7 @@
     height: var(--nav-height);
     padding: 0;
     border-radius: var(--radius-md);
-    background-color: rgba(0, 0, 0, 0.28);
+    background-color: rgba(244, 241, 234, 0.92);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     box-sizing: border-box;
@@ -123,14 +154,31 @@
   .mobile-cta-bar { display: flex; }
   .footer { padding-bottom: 76px; }
 
-  /* Hero */
+  /* Hero — stack the copy above the visual */
   .hero {
-    min-height: 0;
+    padding: calc(var(--nav-height) + var(--space-12)) 0 var(--space-16);
   }
-  .hero__left {
-    max-width: 100%;
-    min-height: 56vh;
-    padding: calc(var(--nav-height) + var(--space-12)) var(--space-8) var(--space-10) var(--space-8);
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  /* Pull the floating cards fully inside the frame so neither can hang past
+     the image edge once the columns narrow. */
+  .hero__card {
+    width: 13.5rem;
+    max-width: calc(100% - var(--space-10));
+  }
+
+  .hero__card--tl {
+    top: var(--space-5);
+    left: var(--space-5);
+  }
+
+  .hero__card--br {
+    bottom: var(--space-5);
+    right: var(--space-5);
   }
 }
 
@@ -149,9 +197,8 @@
   .section--lg { padding: var(--space-24) 0; }
   .trust-bar { display: none; }
 
-  .hero {
-    display: block;
-    min-height: 0;
+  .hero__visual img {
+    height: clamp(20rem, 58vw, 26rem);
   }
 
   /* Conditions — single column accordion on mobile */
@@ -542,28 +589,17 @@
     padding: 0 var(--space-5);
   }
 
-  /* Hero — mobile: full-screen, text in bottom 25% */
+  /* Hero — mobile: light, stacked, full-width actions */
   .hero {
-    height: 100dvh;
-    min-height: 100dvh;
-    position: relative;
-    background:
-      linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0) 65%),
-      url('../assets/images/hero.jpg') center center / cover no-repeat;
+    padding: calc(var(--nav-height) + var(--space-10)) 0 var(--space-12);
   }
 
-  .hero__left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    max-width: 100%;
-    min-height: 40dvh;
-    justify-content: flex-start;
-    padding: var(--space-8) var(--space-6) var(--space-10) var(--space-6);
+  .hero__glow {
+    top: -16rem;
+    right: -12rem;
+    width: 30rem;
+    height: 30rem;
   }
-
-  .hero__eyebrow { display: none; }
 
   .hero__actions {
     flex-direction: column;
@@ -576,8 +612,25 @@
     width: 100%;
   }
 
-  .hero__trust { display: none; }
-  .hero__scroll-indicator { display: none; }
+  .hero__trust {
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+    padding-top: var(--space-5);
+  }
+
+  /* One card only on small screens, kept inside the frame. */
+  .hero__card {
+    width: auto;
+    max-width: calc(100% - var(--space-8));
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .hero__card--tl { display: none; }
+
+  .hero__card--br {
+    right: var(--space-4);
+    bottom: var(--space-4);
+  }
 
   /* Conditions */
   .conditions__grid { grid-template-columns: 1fr; }
@@ -655,14 +708,14 @@
   }
 
   .hero__headline {
-    font-size: 2.35rem;
-    line-height: 1.08;
+    font-size: 1.75rem;
+    line-height: 1.16;
   }
 
   .hero__subheadline {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     line-height: 1.68;
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-7);
   }
 
   .hero__trust {
@@ -672,14 +725,7 @@
   }
 
   .hero__trust-item {
-    flex-basis: 100%;
-  }
-
-  .hero__mobile-model { height: 240px; }
-
-  .hero__brain-model {
-    width: 92%;
-    min-height: 220px;
+    font-size: var(--text-xs);
   }
 }
 
@@ -692,8 +738,6 @@
   :root {
     --container-max: 1360px;
   }
-
-  .hero__headline { font-size: 5.2rem; }
 }
 
 /* --------------------------------------------------------------------------
@@ -727,7 +771,8 @@
 
   .nav,
   .mobile-cta-bar,
-  .hero__scroll-indicator,
+  .hero__card,
+  .hero__glow,
   .final-cta,
   .footer__social { display: none; }
 
