@@ -2012,6 +2012,13 @@
   font-style: normal;
 }
 
+.footer__cin {
+  font-size: var(--text-xs);
+  color: rgba(244, 241, 234, 0.35);
+  letter-spacing: 0.04em;
+  margin-top: var(--space-3);
+}
+
 .footer__social {
   display: flex;
   gap: var(--space-3);
