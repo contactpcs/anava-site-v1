@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ANAVA Clinics Pvt Ltd — Wellness, neuromodulation care, and non-invasive therapy for treatment-resistant depression, chronic pain, and neurological rehabilitation, supported by a dedicated software platform. Clinics in Pune and Mumbai.">
+  <meta name="description" content="ANAVA Clinics Pvt Ltd — Wellness, neuromodulation care, and non-invasive therapy for treatment-resistant depression, chronic pain, and neurological rehabilitation, supported by a dedicated software platform built in-house in Pune. First clinic opening in Pune.">
   <meta name="theme-color" content="#1F3B34">
   <title>ANAVA Clinics — When medicine alone wasn't enough</title>
-
-  <!-- Open Graph -->
+  <link rel="canonical" href="https://anavaclinics.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ANAVA Clinics">
   <meta property="og:title" content="ANAVA Clinics">
   <meta property="og:description" content="Wellness, neuromodulation care, and non-invasive therapy — connected end-to-end by a dedicated software platform.">
-  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anavaclinics.com/">
+  <meta property="og:image" content="https://anavaclinics.com/assets/images/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ANAVA Clinics">
+  <meta name="twitter:description" content="Wellness, neuromodulation care, and non-invasive therapy — connected end-to-end by a dedicated software platform.">
+
+
+  <!-- Open Graph -->
 
   <!-- Preconnect for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,12 +26,38 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/styles.css?v=05ba16db">
-  <link rel="stylesheet" href="css/components.css?v=b5902584">
-  <link rel="stylesheet" href="css/responsive.css?v=f5441cc9">
+  <link rel="stylesheet" href="css/components.css?v=ae7b2db1">
+  <link rel="stylesheet" href="css/responsive.css?v=e85f8601">
 
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/png" href="assets/images/logo.png">
 
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ANAVA Clinics Private Limited",
+  "alternateName": "ANAVA Clinics",
+  "url": "https://anavaclinics.com/",
+  "logo": "https://anavaclinics.com/assets/images/logo.png",
+  "foundingDate": "2026-09-22",
+  "email": "contact@anavaclinics.com",
+  "telephone": "+91-724-9310743",
+  "sameAs": [
+    "https://www.linkedin.com/company/anava-clinics"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "One North, Magarpatta Annexe - A, BG Shirke Road, Magarpatta, Hadapsar",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411013",
+    "addressCountry": "IN"
+  },
+  "description": "ANAVA Clinics Pvt Ltd provides wellness and non-invasive neuromodulation care, supported by a clinical software platform designed and built in-house in Pune."
+}
+  </script>
 </head>
 <body>
 
@@ -119,7 +153,7 @@
         <div class="trust-bar__divider" aria-hidden="true"></div>
         <div class="trust-bar__item">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          India &amp; Europe
+          Pune &nbsp;·&nbsp; expanding across India
         </div>
       </div>
     </div>
@@ -208,13 +242,17 @@
             <span class="condition-tile__name">Chronic Pain</span>
           </a>
 
+          <a href="conditions.html#adhd" class="condition-tile reveal reveal-delay-3">
+            <span class="condition-tile__icon" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span>
+            <span class="condition-tile__name">ADHD</span>
+          </a>
+
         </div>
 
         <div class="conditions__secondary">
-            <a href="conditions.html#neurorehab" class="condition-mini">ADHD</a>
-            <a href="conditions.html#neurorehab" class="condition-mini">Insomnia</a>
+            <a href="conditions.html#insomnia" class="condition-mini">Insomnia</a>
             <a href="conditions.html#neurorehab" class="condition-mini">Parkinson&rsquo;s</a>
-            <a href="conditions.html#neurorehab" class="condition-mini">Dementia</a>
+            <a href="conditions.html#dementia" class="condition-mini">Dementia</a>
             <a href="conditions.html#neurorehab" class="condition-mini">Stroke Recovery</a>
         </div>
 
@@ -290,7 +328,7 @@
             Evidence-based neurotherapy,<br>delivered with precision
           </h2>
           <p class="treatments__subtitle reveal reveal-delay-2">
-            tDCS and tVNS are available now in our clinics, with TMS and TPS joining our offering soon — each selected and combined based on each patient's individual profile and clinical needs.
+            tDCS and tVNS are the therapies we will offer from day one, with TMS and TPS joining our offering as we grow &mdash; each selected and combined based on each patient&rsquo;s individual profile and clinical needs.
           </p>
         </div>
 
@@ -476,6 +514,9 @@
           </h2>
           <p class="platform__subtitle reveal reveal-delay-2">
             Neuromodulation only works when the whole pathway holds together &mdash; intake, protocol, device session, and follow-up. We built our own software platform so nothing is left to paper, memory, or guesswork.
+          </p>
+          <p class="platform__subtitle platform__subtitle--attribution reveal reveal-delay-3">
+            Our platform is designed and built in-house by our technology team in Pune.
           </p>
         </div>
 
@@ -880,12 +921,12 @@
               <div class="doctor-card__avatar">
                 <img
                   src="assets/images/doctor-prerna-shah-photo.png"
-                  alt="Dr. Prerna Shah, Affiliated Network Specialist, ANAVA Clinics"
+                  alt="Prerna Shah, Affiliated Network Specialist, ANAVA Clinics"
                   loading="lazy"
                 >
               </div>
               <div class="doctor-card__body">
-                <h4 class="doctor-card__name">Dr. Prerna Shah</h4>
+                <h4 class="doctor-card__name">Prerna Shah</h4>
                 <p class="doctor-card__role">Affiliated Network Specialist</p>
                 <p class="doctor-card__bio">M.S. in Counselling and Psychotherapy.</p>
               </div>
@@ -931,44 +972,24 @@
             Where you can find us
           </h2>
           <p class="clinics__subtitle reveal reveal-delay-2">
-            Opening soon in Pune, with further locations planned across India and Europe.
+            Opening soon in Pune, with further locations planned.
           </p>
         </div>
 
         <div class="clinics__grid clinics__grid--single">
 
-          <article class="clinic-card reveal" aria-label="ANAVA Clinics Pune">
-            <div class="clinic-card__image">
-              <img
-                src="assets/images/one-north-anava-clinic-pune-photo-reference.png"
-                alt="One North, Magarpatta — location of ANAVA Clinics Pune"
-                loading="lazy"
-                class="img-fill"
-              >
-              <div class="img-overlay"></div>
-              <span class="clinic-card__badge">Coming Soon</span>
-            </div>
+          <article class="clinic-card clinic-card--announce reveal" aria-label="ANAVA Clinics Pune — opening soon">
             <div class="clinic-card__body">
-              <h3 class="clinic-card__name">Anava Clinics One North</h3>
-              <span class="clinic-card__city">Pune, Maharashtra</span>
-              <span class="clinic-card__expand" aria-hidden="true"></span>
-              <div class="clinic-card__details">
-                <div class="clinic-card__detail">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  One North, Magarpatta Annexe - A, BG Shirke Road, Magarpatta, Hadapsar, Pune, Maharashtra 411013
-                </div>
-                <div class="clinic-card__detail">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12.5 19.79 19.79 0 0 1 1.61 3.89A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                  +91 724-9310743
-                </div>
-                <div class="clinic-card__detail">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  Opening 2026
-                </div>
-              </div>
+              <span class="clinic-card__badge clinic-card__badge--static">Opening Soon</span>
+              <h3 class="clinic-card__name">Pune</h3>
+              <p class="clinic-card__announce-text">
+                Our first clinic opens in Pune soon. Register your interest to be notified.
+              </p>
+              <p class="clinic-card__announce-note">
+                We will share the address and opening date once the clinic is confirmed.
+              </p>
               <div class="clinic-card__actions">
                 <a href="contact.html" class="btn btn--pine">Register Interest</a>
-                <a href="locations.html#pune" class="btn btn--outline-pine">View Clinic</a>
               </div>
             </div>
           </article>
@@ -1045,7 +1066,7 @@
             </button>
             <div class="faq-item__answer" id="faq-4" role="region">
               <div class="faq-item__answer-inner">
-                Suitability depends on your specific condition, medical history, and treatment goals. We assess each patient carefully before recommending any therapy. Each modality carries its own contraindications — for example, certain metallic implants in or near the head or ear — which our clinical team will review during your initial consultation. The best way to find out if ANAVA can help is to book a consultation.
+                Suitability depends on your specific condition, medical history, and treatment goals. We assess each patient carefully before recommending any therapy. Each modality carries its own contraindications — for example, certain metallic implants in or near the head or ear — which our clinical team will review during your initial consultation. The best way to find out if ANAVA can help is to register your interest and speak with our team.
               </div>
             </div>
           </div>
@@ -1111,7 +1132,7 @@
           </div>
 
           <p class="final-cta__note reveal reveal-delay-4">
-            Confidential &nbsp;·&nbsp; No obligation &nbsp;·&nbsp; Pune &amp; Mumbai
+            Confidential &nbsp;·&nbsp; No obligation &nbsp;·&nbsp; Pune
           </p>
 
         </div>
@@ -1137,17 +1158,8 @@
           <p class="footer__tagline">
             "Safe. Non-invasive. Designed for people who've been searching for a better way."
           </p>
-          <div class="footer__social" aria-label="Social media links">
-            <a href="#" class="footer__social-link" aria-label="LinkedIn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
-            <a href="#" class="footer__social-link" aria-label="Instagram">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="#" class="footer__social-link" aria-label="Facebook">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-          </div>
+          <div class="footer__office"><span class="footer__office-label">Registered / Corporate Office</span><address class="footer__office-address">One North, Magarpatta Annexe - A,<br>BG Shirke Road, Magarpatta, Hadapsar,<br>Pune, Maharashtra 411013, India</address></div>
+          <div class="footer__social" aria-label="Social media links"><a href="https://www.linkedin.com/company/anava-clinics" class="footer__social-link" aria-label="ANAVA Clinics on LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
         </div>
 
         <!-- Explore -->
@@ -1179,8 +1191,7 @@
           <ul class="footer__links" role="list">
             <li><a href="mailto:contact@anavaclinics.com" class="footer__link">contact@anavaclinics.com</a></li>
             <li><a href="tel:+917249310743" class="footer__link">+91 724-9310743</a></li>
-            <li><a href="locations.html#pune" class="footer__link">Pune Clinic</a></li>
-            <li><a href="locations.html#mumbai" class="footer__link">Mumbai Clinic</a></li>
+            <li><a href="contact.html#offices" class="footer__link">Registered / Corporate Office</a></li>
             <li><a href="contact.html" class="footer__link">General enquiries</a></li>
           </ul>
         </div>
@@ -1191,9 +1202,9 @@
         <p class="footer__copyright">&copy; 2026 ANAVA Clinics Pvt Ltd. All rights reserved.</p>
         <p class="footer__motto">When medicine alone wasn't enough.</p>
         <div class="footer__legal">
-          <a href="#" class="footer__legal-link">Privacy Policy</a>
-          <a href="#" class="footer__legal-link">Terms of Use</a>
-          <a href="#" class="footer__legal-link">Medical Disclaimer</a>
+          <a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a>
+          <a href="terms-of-use.html" class="footer__legal-link">Terms of Use</a>
+          <a href="medical-disclaimer.html" class="footer__legal-link">Medical Disclaimer</a>
         </div>
       </div>
 
@@ -1206,6 +1217,6 @@
     <a href="tel:+917249310743" class="btn btn--outline">Call Us</a>
   </div>
 
-  <script src="js/scripts.js?v=5152a209"></script>
+  <script src="js/scripts.js?v=1f8fdc94"></script>
 </body>
 </html>

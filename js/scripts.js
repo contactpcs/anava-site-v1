@@ -153,7 +153,8 @@
      Clinic Cards — accordion expand on mobile
   -------------------------------------------------------------------------- */
 
-  var clinicCards = document.querySelectorAll('.clinic-card');
+  // Announcement cards have nothing to expand — their links must tap through
+  var clinicCards = document.querySelectorAll('.clinic-card:not(.clinic-card--announce)');
 
   clinicCards.forEach(function (card) {
     card.addEventListener('click', function (e) {

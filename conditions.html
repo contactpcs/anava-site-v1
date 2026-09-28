@@ -3,13 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ANAVA Clinics supports mild and chronic depression, chronic pain, anxiety, and neurological rehabilitation with evidence-based neurotherapy.">
+  <meta name="description" content="ANAVA Clinics supports mild and chronic depression, chronic pain, anxiety disorders, ADHD, and neurological rehabilitation with evidence-based neurotherapy.">
   <title>Conditions We Treat — ANAVA Clinics</title>
+  <link rel="canonical" href="https://anavaclinics.com/conditions.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ANAVA Clinics">
+  <meta property="og:title" content="Conditions We Treat — ANAVA Clinics">
+  <meta property="og:description" content="Depression, chronic pain, anxiety disorders, ADHD and neurological rehabilitation, supported with evidence-based neurotherapy.">
+  <meta property="og:url" content="https://anavaclinics.com/conditions.html">
+  <meta property="og:image" content="https://anavaclinics.com/assets/images/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Conditions We Treat — ANAVA Clinics">
+  <meta name="twitter:description" content="Depression, chronic pain, anxiety disorders, ADHD and neurological rehabilitation, supported with evidence-based neurotherapy.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/styles.css?v=05ba16db">
-  <link rel="stylesheet" href="css/components.css?v=b5902584">
-  <link rel="stylesheet" href="css/responsive.css?v=f5441cc9">
+  <link rel="stylesheet" href="css/components.css?v=ae7b2db1">
+  <link rel="stylesheet" href="css/responsive.css?v=e85f8601">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <style>
     /* ---- Conditions page — mobile responsive ---- */
@@ -24,6 +35,11 @@
         grid-template-columns: 1fr !important;
         gap: var(--space-8) !important;
       }
+      /* Visual-first rows: put the heading above the artwork on phones */
+      .cond-row--visual-first > *:first-child { order: 2; }
+      .cond-row--visual-first > *:last-child { order: 1; }
+      /* Tall decorative panels waste height once stacked */
+      .cond-row--visual-first > *:first-child { aspect-ratio: 16 / 10 !important; }
       /* Improve image visibility on mobile */
       .cond-row .img-fill { opacity: 0.65 !important; }
       .cond-img-wrap .img-fill { opacity: 0.65 !important; }
@@ -103,7 +119,7 @@
               Whether you've tried medication, therapy, or both — neurotherapy works through entirely different mechanisms, directly modulating the neural circuits involved in mood regulation rather than through systemic brain chemistry. This opens a new avenue for patients across the mild-to-chronic spectrum.
             </p>
             <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-8);" class="reveal reveal-delay-3">
-              tDCS (Transcranial Direct Current Stimulation) and tVNS (transcutaneous auricular Vagus Nerve Stimulation) are both available now at ANAVA Clinics, with published research supporting their use in mood regulation and depressive symptoms. TMS, which has FDA clearance for depression and decades of clinical use, is coming soon to ANAVA Clinics.
+              tDCS (Transcranial Direct Current Stimulation) and tVNS (transcutaneous auricular Vagus Nerve Stimulation) are the therapies ANAVA Clinics will offer from opening, with published research supporting their use in mood regulation and depressive symptoms. TMS, which has FDA clearance for depression and decades of clinical use, will join our offering as we grow.
             </p>
             <a href="contact.html" class="btn btn--pine reveal reveal-delay-4">
               Ask if this could help you
@@ -116,15 +132,15 @@
               <ul style="display:flex; flex-direction:column; gap:var(--space-3);">
                 <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <a href="treatments.html#tdcs" style="color:var(--deep-pine); font-weight:500;">tDCS</a> — available now, primary option
+                  <a href="treatments.html#tdcs" style="color:var(--deep-pine); font-weight:500;">tDCS</a> &mdash; offered from opening, primary option
                 </li>
                 <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <a href="treatments.html#tvns" style="color:var(--deep-pine); font-weight:500;">tVNS</a> — available now, mood &amp; stress regulation
+                  <a href="treatments.html#tvns" style="color:var(--deep-pine); font-weight:500;">tVNS</a> &mdash; offered from opening, mood &amp; stress regulation
                 </li>
                 <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  <a href="treatments.html#tms" style="color:var(--deep-pine); font-weight:500;">TMS</a> — coming soon to ANAVA
+                  <a href="treatments.html#tms" style="color:var(--deep-pine); font-weight:500;">TMS</a> &mdash; joining our offering as we grow
                 </li>
               </ul>
             </div>
@@ -150,7 +166,7 @@
     <!-- Chronic Pain -->
     <section class="section section--lg bg-surface" id="pain" aria-labelledby="pain-title">
       <div class="container">
-        <div class="cond-row">
+        <div class="cond-row cond-row--visual-first">
           <div class="reveal reveal-delay-1" style="background:var(--deep-pine); padding:0; aspect-ratio:4/5; position:relative; overflow:hidden;">
             <img
               src="assets/images/chronic-pain.jpg"
@@ -184,7 +200,110 @@
       </div>
     </section>
 
-    <!-- Neurorehab + Anxiety — brief overview -->
+    <!-- Anxiety -->
+    <section class="section section--lg bg-bone" id="anxiety" aria-labelledby="anxiety-title">
+      <div class="container">
+        <div class="cond-row">
+          <div>
+            <p class="section-label reveal">03</p>
+            <h2 style="font-size:clamp(2rem,4vw,var(--text-4xl)); color:var(--deep-pine); margin-bottom:var(--space-5); font-weight:300; line-height:1.15;" class="reveal reveal-delay-1" id="anxiety-title">
+              Anxiety<br>Disorders
+            </h2>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-5);" class="reveal reveal-delay-2">
+              Anxiety becomes a clinical concern when the body&rsquo;s threat response stays switched on long after any real threat has passed. Generalised anxiety, social anxiety and OCD all involve circuits that have learned to over-predict danger &mdash; which is why reasoning with the feeling so rarely settles it.
+            </p>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-5);" class="reveal reveal-delay-2">
+              Much of this activity centres on the prefrontal cortex and its regulation of deeper limbic structures. When that top-down control weakens, the alarm runs unchecked. Neuromodulation aims at exactly this relationship &mdash; supporting regulatory control rather than sedating the response.
+            </p>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-8);" class="reveal reveal-delay-3">
+              For people whose anxiety has not responded adequately to medication or psychological therapy, this offers a different point of intervention &mdash; one that can sit alongside the therapy or medication you are already receiving, not in place of it.
+            </p>
+            <a href="contact.html" class="btn btn--pine reveal reveal-delay-4">
+              Ask if this could help you
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+          <div>
+            <div class="reveal" style="background:var(--white); border:1px solid var(--color-border); padding:var(--space-8); margin-bottom:var(--space-4);">
+              <h3 style="font-family:var(--font-display); font-size:var(--text-lg); color:var(--deep-pine); margin-bottom:var(--space-4);">Relevant therapies</h3>
+              <ul style="display:flex; flex-direction:column; gap:var(--space-3);">
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tvns" style="color:var(--deep-pine); font-weight:500;">tVNS</a> &mdash; offered from opening, primary option
+                </li>
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tdcs" style="color:var(--deep-pine); font-weight:500;">tDCS</a> &mdash; offered from opening, prefrontal regulation
+                </li>
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tms" style="color:var(--deep-pine); font-weight:500;">TMS</a> &mdash; joining our offering as we grow
+                </li>
+              </ul>
+            </div>
+            <div class="reveal reveal-delay-1" style="background:var(--deep-pine); padding:var(--space-8); position:relative; overflow:hidden; min-height:160px;">
+              <p style="font-family:var(--font-display); font-size:var(--text-lg); font-style:italic; color:var(--bone); line-height:var(--leading-snug); margin-bottom:var(--space-3);">
+                "Calm is not the absence of a threat. It is a nervous system that can tell the difference."
+              </p>
+              <p style="font-size:var(--text-xs); color:rgba(244,241,234,0.55); line-height:var(--leading-relaxed);">
+                Any therapy is considered alongside your existing care, never as a replacement for it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADHD -->
+    <section class="section section--lg bg-surface" id="adhd" aria-labelledby="adhd-title">
+      <div class="container">
+        <div class="cond-row cond-row--visual-first">
+          <div class="reveal reveal-delay-1" style="background:var(--deep-pine); padding:var(--space-10); aspect-ratio:4/5; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end;">
+            <p style="font-family:var(--font-display); font-size:var(--text-2xl); font-weight:300; color:var(--bone); line-height:1.2; font-style:italic;">
+              "Attention is not effort. It is a network deciding what matters."
+            </p>
+            <p style="font-size:var(--text-xs); color:rgba(244,241,234,0.5); line-height:var(--leading-relaxed); margin-top:var(--space-5);">
+              ADHD care at ANAVA is always led by a qualified clinician, and neuromodulation is considered only as part of a wider plan.
+            </p>
+          </div>
+          <div>
+            <p class="section-label reveal">04</p>
+            <h2 style="font-size:clamp(2rem,4vw,var(--text-4xl)); color:var(--deep-pine); margin-bottom:var(--space-5); font-weight:300; line-height:1.15;" class="reveal reveal-delay-1" id="adhd-title">
+              ADHD &amp;<br>Attention Difficulties
+            </h2>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-5);" class="reveal reveal-delay-2">
+              ADHD is a difference in how the brain manages attention, impulse and working memory &mdash; not a shortage of willpower. Much of it traces to frontal networks that govern executive function, and to the dopamine signalling those networks depend on.
+            </p>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-5);" class="reveal reveal-delay-2">
+              Research into neuromodulation for ADHD focuses on supporting activity in these prefrontal regions. The evidence base here is younger and smaller than for depression, and we will say so plainly: this is a developing area, not a settled one.
+            </p>
+            <p style="color:var(--color-text-muted); line-height:var(--leading-relaxed); margin-bottom:var(--space-8);" class="reveal reveal-delay-3">
+              Because of that, we approach ADHD carefully. Neuromodulation is considered as a complement to established care &mdash; behavioural strategies, psychological support and, where a clinician has prescribed it, medication. We will tell you honestly if we do not think it is the right route for you.
+            </p>
+            <a href="contact.html" class="btn btn--pine reveal reveal-delay-4">
+              Ask if this could help you
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+
+            <div class="reveal reveal-delay-4" style="background:var(--bone); border:1px solid var(--color-border); padding:var(--space-6); margin-top:var(--space-8);">
+              <h3 style="font-family:var(--font-display); font-size:var(--text-lg); color:var(--deep-pine); margin-bottom:var(--space-4);">Relevant therapies</h3>
+              <ul style="display:flex; flex-direction:column; gap:var(--space-3);">
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tdcs" style="color:var(--deep-pine); font-weight:500;">tDCS</a> &mdash; offered from opening, prefrontal focus
+                </li>
+                <li style="display:flex; align-items:center; gap:var(--space-3); font-size:var(--text-sm); color:var(--color-text-muted);">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--brass)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <a href="treatments.html#tvns" style="color:var(--deep-pine); font-weight:500;">tVNS</a> &mdash; offered from opening, regulation support
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Further conditions — brief overview -->
     <section class="section bg-pine" id="neurorehab" aria-labelledby="more-title">
       <div class="container">
         <p class="section-label reveal" style="color:var(--brass);">Also supported</p>
@@ -194,19 +313,28 @@
         <div class="grid-3">
 
           <div class="reveal" style="border:1px solid rgba(244,241,234,0.06); padding:var(--space-8); background:rgba(244,241,234,0.03);">
-            <p style="font-size:var(--text-xs); font-weight:600; letter-spacing:var(--tracking-widest); text-transform:uppercase; color:var(--brass); margin-bottom:var(--space-4);">03</p>
+            <p style="font-size:var(--text-xs); font-weight:600; letter-spacing:var(--tracking-widest); text-transform:uppercase; color:var(--brass); margin-bottom:var(--space-4);">05</p>
             <h3 style="font-family:var(--font-display); font-size:var(--text-xl); color:var(--bone); margin-bottom:var(--space-4);">Neurological Rehabilitation</h3>
             <p style="font-size:var(--text-sm); color:rgba(244,241,234,0.55); line-height:var(--leading-relaxed); margin-bottom:var(--space-6);">
-              Parkinson's disease, traumatic brain injury, and other conditions involving neurological decline may benefit from targeted neuromodulation to support function and slow progression.
+              Parkinson&rsquo;s disease, stroke recovery, traumatic brain injury and other conditions involving neurological decline may benefit from targeted neuromodulation to support function.
             </p>
             <a href="contact.html" class="btn btn--outline" style="font-size:11px; padding:var(--space-3) var(--space-5);">Enquire</a>
           </div>
 
-          <div class="reveal reveal-delay-1" id="anxiety" style="border:1px solid rgba(244,241,234,0.06); padding:var(--space-8); background:rgba(244,241,234,0.03);">
-            <p style="font-size:var(--text-xs); font-weight:600; letter-spacing:var(--tracking-widest); text-transform:uppercase; color:var(--brass); margin-bottom:var(--space-4);">04</p>
-            <h3 style="font-family:var(--font-display); font-size:var(--text-xl); color:var(--bone); margin-bottom:var(--space-4);">Anxiety Disorders</h3>
+          <div class="reveal reveal-delay-1" id="insomnia" style="border:1px solid rgba(244,241,234,0.06); padding:var(--space-8); background:rgba(244,241,234,0.03);">
+            <p style="font-size:var(--text-xs); font-weight:600; letter-spacing:var(--tracking-widest); text-transform:uppercase; color:var(--brass); margin-bottom:var(--space-4);">06</p>
+            <h3 style="font-family:var(--font-display); font-size:var(--text-xl); color:var(--bone); margin-bottom:var(--space-4);">Insomnia &amp; Sleep</h3>
             <p style="font-size:var(--text-sm); color:rgba(244,241,234,0.55); line-height:var(--leading-relaxed); margin-bottom:var(--space-6);">
-              For generalised anxiety, OCD, and social anxiety that hasn't responded adequately to medication or psychological therapy, neuromodulation may offer an additional dimension of treatment.
+              Persistent sleep difficulty often travels with mood and anxiety conditions. Where it does, addressing the underlying regulation may support sleep alongside your existing care.
+            </p>
+            <a href="contact.html" class="btn btn--outline" style="font-size:11px; padding:var(--space-3) var(--space-5);">Enquire</a>
+          </div>
+
+          <div class="reveal reveal-delay-2" id="dementia" style="border:1px solid rgba(244,241,234,0.06); padding:var(--space-8); background:rgba(244,241,234,0.03);">
+            <p style="font-size:var(--text-xs); font-weight:600; letter-spacing:var(--tracking-widest); text-transform:uppercase; color:var(--brass); margin-bottom:var(--space-4);">07</p>
+            <h3 style="font-family:var(--font-display); font-size:var(--text-xl); color:var(--bone); margin-bottom:var(--space-4);">Cognitive Decline &amp; Dementia</h3>
+            <p style="font-size:var(--text-sm); color:rgba(244,241,234,0.55); line-height:var(--leading-relaxed); margin-bottom:var(--space-6);">
+              Research into neuromodulation for memory and cognitive function is active but early. We assess each case individually and will be candid about what the evidence does and does not yet show.
             </p>
             <a href="contact.html" class="btn btn--outline" style="font-size:11px; padding:var(--space-3) var(--space-5);">Enquire</a>
           </div>
@@ -242,21 +370,22 @@
         <div class="footer__brand">
           <div class="footer__logo"><img src="assets/images/logo.png" alt="ANAVA Clinics" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"><span class="footer__logo-text" style="display:none;">ANAVA</span></div>
           <p class="footer__tagline">"Safe. Non-invasive. Designed for people who've been searching for a better way."</p>
-          <div class="footer__social"><a href="#" class="footer__social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a></div>
+          <div class="footer__office"><span class="footer__office-label">Registered / Corporate Office</span><address class="footer__office-address">One North, Magarpatta Annexe - A,<br>BG Shirke Road, Magarpatta, Hadapsar,<br>Pune, Maharashtra 411013, India</address></div>
+          <div class="footer__social" aria-label="Social media links"><a href="https://www.linkedin.com/company/anava-clinics" class="footer__social-link" aria-label="ANAVA Clinics on LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
         </div>
-        <nav aria-label="Treatments"><span class="footer__col-title">Treatments</span><ul class="footer__links"><li><a href="treatments.html#tdcs" class="footer__link">tDCS</a></li><li><a href="treatments.html#tvns" class="footer__link">tVNS</a></li><li><a href="treatments.html#tms" class="footer__link">TMS</a></li><li><a href="treatments.html#tps" class="footer__link">TPS</a></li></ul></nav>
-        <nav aria-label="Company"><span class="footer__col-title">ANAVA</span><ul class="footer__links"><li><a href="about.html" class="footer__link">Our Story</a></li><li><a href="locations.html" class="footer__link">Clinics</a></li><li><a href="contact.html" class="footer__link">Contact</a></li></ul></nav>
-        <div><span class="footer__col-title">Contact</span><ul class="footer__links"><li><a href="mailto:contact@anavaclinics.com" class="footer__link">contact@anavaclinics.com</a></li></ul></div>
+        <nav aria-label="Treatments"><span class="footer__col-title">Treatments</span><ul class="footer__links"><li><a href="treatments.html#tdcs" class="footer__link">tDCS</a></li><li><a href="treatments.html#tvns" class="footer__link">tVNS</a></li><li><a href="treatments.html#tms" class="footer__link">TMS</a></li><li><a href="treatments.html#tps" class="footer__link">TPS</a></li><li><a href="conditions.html" class="footer__link">Conditions we treat</a></li></ul></nav>
+        <nav aria-label="Company"><span class="footer__col-title">ANAVA</span><ul class="footer__links"><li><a href="about.html" class="footer__link">Our Story</a></li><li><a href="about.html#network" class="footer__link">Clinical Team</a></li><li><a href="locations.html" class="footer__link">Clinics</a></li><li><a href="contact.html" class="footer__link">Book a Consultation</a></li></ul></nav>
+        <div><span class="footer__col-title">Contact</span><ul class="footer__links"><li><a href="mailto:contact@anavaclinics.com" class="footer__link">contact@anavaclinics.com</a></li><li><a href="tel:+917249310743" class="footer__link">+91 724-9310743</a></li><li><a href="contact.html#offices" class="footer__link">Registered / Corporate Office</a></li><li><a href="contact.html" class="footer__link">General enquiries</a></li></ul></div>
       </div>
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; 2026 ANAVA Clinics Pvt Ltd. All rights reserved.</p>
         <p class="footer__motto">When medicine alone wasn't enough.</p>
-        <div class="footer__legal"><a href="#" class="footer__legal-link">Privacy Policy</a><a href="#" class="footer__legal-link">Terms of Use</a><a href="#" class="footer__legal-link">Medical Disclaimer</a></div>
+        <div class="footer__legal"><a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a><a href="terms-of-use.html" class="footer__legal-link">Terms of Use</a><a href="medical-disclaimer.html" class="footer__legal-link">Medical Disclaimer</a></div>
       </div>
     </div>
   </footer>
 
   <div class="mobile-cta-bar"><a href="contact.html" class="btn btn--primary">Book Consultation</a><a href="tel:+917249310743" class="btn btn--outline">Call Us</a></div>
-  <script src="js/scripts.js?v=5152a209"></script>
+  <script src="js/scripts.js?v=1f8fdc94"></script>
 </body>
 </html>

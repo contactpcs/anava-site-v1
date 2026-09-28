@@ -5,11 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Book a consultation with ANAVA Clinics. Speak with our team about neurotherapy for depression, chronic pain, and neurological rehabilitation.">
   <title>Contact &amp; Book — ANAVA Clinics</title>
+  <link rel="canonical" href="https://anavaclinics.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ANAVA Clinics">
+  <meta property="og:title" content="Contact — ANAVA Clinics">
+  <meta property="og:description" content="Speak with the ANAVA Clinics team about neurotherapy, or register your interest in our first Pune clinic.">
+  <meta property="og:url" content="https://anavaclinics.com/contact.html">
+  <meta property="og:image" content="https://anavaclinics.com/assets/images/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact — ANAVA Clinics">
+  <meta name="twitter:description" content="Speak with the ANAVA Clinics team about neurotherapy, or register your interest in our first Pune clinic.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/styles.css?v=05ba16db">
-  <link rel="stylesheet" href="css/components.css?v=b5902584">
-  <link rel="stylesheet" href="css/responsive.css?v=f5441cc9">
+  <link rel="stylesheet" href="css/components.css?v=ae7b2db1">
+  <link rel="stylesheet" href="css/responsive.css?v=e85f8601">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
 
   <style>
@@ -85,6 +96,14 @@
     }
 
     .contact-info__item-value a:hover { color: var(--brass); }
+
+    .contact-info__item-note {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      line-height: var(--leading-relaxed);
+      margin-top: var(--space-2);
+      font-style: italic;
+    }
 
     .contact-reassure {
       background-color: var(--bone);
@@ -206,7 +225,7 @@
               Our initial conversations carry no obligation. We'll answer your questions honestly, help you understand whether neurotherapy might be suitable for your situation, and explain exactly what an assessment involves.
             </p>
 
-            <div class="contact-info__details">
+            <div class="contact-info__details" id="offices">
               <div class="contact-info__item reveal reveal-delay-2">
                 <div class="contact-info__item-icon" aria-hidden="true">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -232,8 +251,9 @@
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
-                  <p class="contact-info__item-label">Pune Clinic</p>
-                  <p class="contact-info__item-value">One North, Magarpatta Annexe - A,<br>BG Shirke Road, Magarpatta, Hadapsar,<br>Pune, Maharashtra 411013</p>
+                  <p class="contact-info__item-label">Registered / Corporate Office</p>
+                  <p class="contact-info__item-value">One North, Magarpatta Annexe - A,<br>BG Shirke Road, Magarpatta, Hadapsar,<br>Pune, Maharashtra 411013, India</p>
+                  <p class="contact-info__item-note">This is our office, not a clinic &mdash; please do not visit for care.</p>
                 </div>
               </div>
 
@@ -242,8 +262,8 @@
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <div>
-                  <p class="contact-info__item-label">Mumbai Clinic</p>
-                  <p class="contact-info__item-value">Opening Q4 2026<br>Register interest below</p>
+                  <p class="contact-info__item-label">Our first clinic</p>
+                  <p class="contact-info__item-value">Opening in Pune soon.<br>Register your interest below to be notified.</p>
                 </div>
               </div>
 
@@ -313,8 +333,7 @@
                 <label class="form-label" for="location">Preferred clinic location <span aria-label="required" style="color:var(--clay);">*</span></label>
                 <select class="form-select form-input" id="location" name="location" required>
                   <option value="" disabled selected>Select a location</option>
-                  <option value="pune">Anava Clinics — Pune</option>
-                  <option value="mumbai">Anava Clinics — Mumbai (register interest)</option>
+                  <option value="pune">Anava Clinics — Pune (register interest)</option>
                   <option value="other">Other / Not sure yet</option>
                 </select>
               </div>
@@ -329,7 +348,7 @@
                 <label style="display:flex; align-items:flex-start; gap:var(--space-3); cursor:pointer;">
                   <input type="checkbox" required style="margin-top:3px; accent-color:var(--deep-pine); width:16px; height:16px; flex-shrink:0;">
                   <span style="font-size:var(--text-sm); color:var(--color-text-muted); line-height:var(--leading-relaxed);">
-                    I consent to ANAVA Clinics storing and using this information to respond to my enquiry. I understand it will not be shared with third parties. <a href="#" style="color:var(--deep-pine); text-decoration:underline; text-underline-offset:2px;">Privacy Policy</a>.
+                    I consent to ANAVA Clinics storing and using this information to respond to my enquiry. I understand it will not be shared with third parties. <a href="privacy-policy.html" style="color:var(--deep-pine); text-decoration:underline; text-underline-offset:2px;">Privacy Policy</a>.
                   </span>
                 </label>
               </div>
@@ -435,25 +454,23 @@
         <div class="footer__brand">
           <div class="footer__logo"><img src="assets/images/logo.png" alt="ANAVA Clinics" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"><span class="footer__logo-text" style="display:none;">ANAVA</span></div>
           <p class="footer__tagline">"Safe. Non-invasive. Designed for people who've been searching for a better way."</p>
-          <div class="footer__social">
-            <a href="#" class="footer__social-link" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="#" class="footer__social-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          </div>
+          <div class="footer__office"><span class="footer__office-label">Registered / Corporate Office</span><address class="footer__office-address">One North, Magarpatta Annexe - A,<br>BG Shirke Road, Magarpatta, Hadapsar,<br>Pune, Maharashtra 411013, India</address></div>
+          <div class="footer__social" aria-label="Social media links"><a href="https://www.linkedin.com/company/anava-clinics" class="footer__social-link" aria-label="ANAVA Clinics on LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
         </div>
-        <nav aria-label="Treatments"><span class="footer__col-title">Treatments</span><ul class="footer__links"><li><a href="treatments.html#tdcs" class="footer__link">tDCS</a></li><li><a href="treatments.html#tvns" class="footer__link">tVNS</a></li><li><a href="treatments.html#tms" class="footer__link">TMS</a></li><li><a href="treatments.html#tps" class="footer__link">TPS</a></li></ul></nav>
-        <nav aria-label="Company"><span class="footer__col-title">ANAVA</span><ul class="footer__links"><li><a href="about.html" class="footer__link">Our Story</a></li><li><a href="locations.html" class="footer__link">Clinics</a></li><li><a href="contact.html" class="footer__link">Contact</a></li></ul></nav>
-        <div><span class="footer__col-title">Contact</span><ul class="footer__links"><li><a href="mailto:contact@anavaclinics.com" class="footer__link">contact@anavaclinics.com</a></li><li><a href="locations.html#pune" class="footer__link">Pune Clinic</a></li><li><a href="locations.html#mumbai" class="footer__link">Mumbai (Coming Soon)</a></li></ul></div>
+        <nav aria-label="Treatments"><span class="footer__col-title">Treatments</span><ul class="footer__links"><li><a href="treatments.html#tdcs" class="footer__link">tDCS</a></li><li><a href="treatments.html#tvns" class="footer__link">tVNS</a></li><li><a href="treatments.html#tms" class="footer__link">TMS</a></li><li><a href="treatments.html#tps" class="footer__link">TPS</a></li><li><a href="conditions.html" class="footer__link">Conditions we treat</a></li></ul></nav>
+        <nav aria-label="Company"><span class="footer__col-title">ANAVA</span><ul class="footer__links"><li><a href="about.html" class="footer__link">Our Story</a></li><li><a href="about.html#network" class="footer__link">Clinical Team</a></li><li><a href="locations.html" class="footer__link">Clinics</a></li><li><a href="contact.html" class="footer__link">Book a Consultation</a></li></ul></nav>
+        <div><span class="footer__col-title">Contact</span><ul class="footer__links"><li><a href="mailto:contact@anavaclinics.com" class="footer__link">contact@anavaclinics.com</a></li><li><a href="tel:+917249310743" class="footer__link">+91 724-9310743</a></li><li><a href="contact.html#offices" class="footer__link">Registered / Corporate Office</a></li><li><a href="contact.html" class="footer__link">General enquiries</a></li></ul></div>
       </div>
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; 2026 ANAVA Clinics Pvt Ltd. All rights reserved.</p>
         <p class="footer__motto">When medicine alone wasn't enough.</p>
-        <div class="footer__legal"><a href="#" class="footer__legal-link">Privacy Policy</a><a href="#" class="footer__legal-link">Terms of Use</a><a href="#" class="footer__legal-link">Medical Disclaimer</a></div>
+        <div class="footer__legal"><a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a><a href="terms-of-use.html" class="footer__legal-link">Terms of Use</a><a href="medical-disclaimer.html" class="footer__legal-link">Medical Disclaimer</a></div>
       </div>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>emailjs.init({ publicKey: 'UjfJdy84SNLKdPrhh' });</script>
-  <script src="js/scripts.js?v=5152a209"></script>
+  <script src="js/scripts.js?v=1f8fdc94"></script>
 </body>
 </html>
