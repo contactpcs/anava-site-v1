@@ -973,16 +973,9 @@
 
 .conditions__primary {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-4);
   margin-bottom: var(--space-6);
-}
-
-/* Two-up at mid widths so four tiles never leave an orphan on its own row */
-@media (max-width: 1023px) {
-  .conditions__primary {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 .condition-tile {
@@ -1013,7 +1006,7 @@
 
 .condition-tile__name {
   font-family: var(--font-display);
-  font-size: clamp(var(--text-base), 1.6vw, var(--text-xl));
+  font-size: clamp(var(--text-lg), 2.2vw, var(--text-2xl));
   font-weight: 400;
   color: var(--deep-pine);
   line-height: var(--leading-snug);
@@ -2270,6 +2263,65 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-20);
+}
+
+/* Security posture band — healthtech credibility inside the platform section */
+.platform__security {
+  margin-top: var(--space-16);
+  padding-top: var(--space-10);
+  border-top: 1px solid rgba(244, 241, 234, 0.08);
+}
+
+.platform__security-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--brass);
+  margin-bottom: var(--space-8);
+}
+
+.platform__security-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  color: var(--bone);
+}
+
+.platform__security-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+.platform__security-item {
+  padding-left: var(--space-4);
+  border-left: 2px solid rgba(185, 138, 62, 0.45);
+}
+
+.platform__security-item h4 {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--bone);
+  margin-bottom: var(--space-2);
+  line-height: var(--leading-snug);
+}
+
+.platform__security-item p {
+  font-size: var(--text-xs);
+  color: rgba(244, 241, 234, 0.55);
+  line-height: var(--leading-relaxed);
+}
+
+.platform__security-foot {
+  margin-top: var(--space-8);
+  font-size: var(--text-xs);
+  color: rgba(244, 241, 234, 0.5);
+}
+
+.platform__security-foot a {
+  color: var(--brass);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .platform__note {
