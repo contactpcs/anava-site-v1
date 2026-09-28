@@ -70,3 +70,7 @@ node_modules/
 
 # Design reference clone (separate repo, UI/UX inspiration only - not part of deployed site)
 /design-reference/
+
+
+# Large hero source image — optimised derivatives are committed instead
+assets/images/background-for-hero.jpg

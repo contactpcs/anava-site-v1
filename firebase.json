@@ -5,7 +5,8 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "design-reference/**"
+      "design-reference/**",
+      "assets/images/background-for-hero.jpg"
     ],
     "headers": [
       {
