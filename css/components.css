@@ -343,7 +343,7 @@
   inset: 0;
   z-index: 0;
   background-image:
-    linear-gradient(to right, rgba(244, 241, 234, 0.94) 0%, rgba(244, 241, 234, 0.80) 45%, rgba(244, 241, 234, 0.62) 100%),
+    linear-gradient(to right, rgba(244, 241, 234, 0.86) 0%, rgba(244, 241, 234, 0.52) 40%, rgba(244, 241, 234, 0.14) 100%),
     url('../assets/images/hero-texture.jpg');
   background-size: auto, cover;
   background-position: center, center;
@@ -380,7 +380,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   align-items: center;
   gap: var(--space-16);
 }
@@ -399,7 +399,9 @@
   font-size: var(--text-xs);
   font-weight: 500;
   letter-spacing: var(--tracking-wide);
-  color: var(--color-text-muted);
+  /* Graphite rather than the muted grey: the badge sits over the strongest
+     part of the texture, and muted grey lands just under AA there. */
+  color: var(--graphite);
   animation: heroRise 0.7s ease both;
 }
 
@@ -479,59 +481,36 @@
   flex-shrink: 0;
 }
 
-/* ---------- Right column ---------- */
+/* ---------- Right column: floating credential cards ---------- */
 
-.hero__right {
+.hero__cards {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
   animation: heroRise 0.8s ease 0.2s both;
 }
 
-.hero__visual {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: 24px;
-  background-color: var(--color-surface);
-  box-shadow: 0 24px 60px rgba(21, 41, 32, 0.12);
-}
-
-.hero__visual img {
-  display: block;
-  width: 100%;
-  height: clamp(21rem, 34vw, 28rem);
-  object-fit: cover;
-  object-position: 58% 28%;
-}
-
-/* Floating credential cards */
 .hero__card {
-  position: absolute;
-  z-index: 2;
   display: flex;
   align-items: flex-start;
-  gap: var(--space-3);
-  width: 15rem;
-  max-width: 62%;
-  padding: var(--space-4) var(--space-5);
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 21rem;
+  padding: var(--space-5) var(--space-6);
   border: 1px solid var(--color-border);
   border-radius: 16px;
-  background-color: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 14px 36px rgba(21, 41, 32, 0.13);
-  animation: heroFloat 6s ease-in-out infinite;
+  background-color: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 14px 36px rgba(21, 41, 32, 0.10);
+  animation: heroFloat 7s ease-in-out infinite;
 }
 
-.hero__card--tl {
-  top: var(--space-8);
-  left: calc(var(--space-8) * -1);
-}
-
-.hero__card--br {
-  bottom: var(--space-8);
-  right: calc(var(--space-8) * -1);
-  animation-delay: -3s;
-}
+/* Stagger the cluster so it reads as floating rather than as a list. */
+.hero__card--one   { margin-left: 0;             animation-delay: 0s; }
+.hero__card--two   { margin-left: var(--space-12); animation-delay: -2.3s; }
+.hero__card--three { margin-left: var(--space-5);  animation-delay: -4.6s; }
 
 .hero__card-icon {
   display: flex;
@@ -578,7 +557,7 @@
   .hero__subheadline,
   .hero__actions,
   .hero__trust,
-  .hero__right,
+  .hero__cards,
   .hero__card {
     animation: none;
   }

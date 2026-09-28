@@ -164,21 +164,23 @@
     gap: var(--space-12);
   }
 
-  /* Pull the floating cards fully inside the frame so neither can hang past
-     the image edge once the columns narrow. */
+  /* Cards sit below the copy once stacked: lay them out in a wrapping row so
+     they read as a band rather than a tall column. */
+  .hero__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
   .hero__card {
-    width: 13.5rem;
-    max-width: calc(100% - var(--space-10));
+    flex: 1 1 15rem;
+    max-width: none;
   }
 
-  .hero__card--tl {
-    top: var(--space-5);
-    left: var(--space-5);
-  }
-
-  .hero__card--br {
-    bottom: var(--space-5);
-    right: var(--space-5);
+  .hero__card--one,
+  .hero__card--two,
+  .hero__card--three {
+    margin-left: 0;
   }
 }
 
@@ -197,8 +199,8 @@
   .section--lg { padding: var(--space-24) 0; }
   .trust-bar { display: none; }
 
-  .hero__visual img {
-    height: clamp(20rem, 58vw, 26rem);
+  .hero__cards {
+    gap: var(--space-3);
   }
 
   /* Conditions — single column accordion on mobile */
@@ -626,18 +628,16 @@
     padding-top: var(--space-5);
   }
 
-  /* One card only on small screens, kept inside the frame. */
-  .hero__card {
-    width: auto;
-    max-width: calc(100% - var(--space-8));
-    padding: var(--space-3) var(--space-4);
+  .hero__cards {
+    flex-direction: column;
+    gap: var(--space-3);
   }
 
-  .hero__card--tl { display: none; }
-
-  .hero__card--br {
-    right: var(--space-4);
-    bottom: var(--space-4);
+  .hero__card {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: none;
+    padding: var(--space-4) var(--space-5);
   }
 
   /* Conditions */
@@ -795,7 +795,7 @@
     min-height: auto;
     padding: 2rem 0;
   }
-  .hero__right { display: none; }
+  .hero__cards { display: none; }
 
   .hero__headline { color: #000; font-size: 2rem; }
 }
