@@ -1,0 +1,833 @@
+/* ==========================================================================
+   ANAVA CLINICS — Google Form pages
+   google-form.css — Page shell and the schema-driven form rendered by
+   js/google-form-renderer.js. Builds on the tokens in styles.css and the
+   .btn / .form-* components in components.css.
+   ========================================================================== */
+
+:root {
+  --gform-width:       680px;   /* Single column: intro and form cards */
+  --gform-wide:        1160px;  /* Two columns from 1024px */
+  --gform-error:       #a14e37; /* Clay, darkened to pass WCAG AA as text on white */
+  --gform-line:        rgba(31, 59, 52, 0.18);
+  --gform-line-strong: rgba(31, 59, 52, 0.45);
+  --gform-selected-bg: rgba(31, 59, 52, 0.05);
+  --gform-gutter:      var(--space-3);
+}
+
+/* --------------------------------------------------------------------------
+   Page shell — centred header, textured pine band with the title, then the
+   intro card and the form card (side by side from 1024px), small footer
+   -------------------------------------------------------------------------- */
+
+.gform-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.gform-header {
+  background-color: var(--bone);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.gform-header__inner {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2) var(--space-4);
+}
+
+.gform-header__logo {
+  display: inline-flex;
+  padding: var(--space-1);
+}
+
+.gform-header__logo img {
+  height: 48px;
+  width: auto;
+}
+
+.gform-hero {
+  position: relative;
+  padding: var(--space-8) var(--space-5) calc(var(--space-16) + var(--space-4));
+  text-align: center;
+  color: var(--bone);
+  background:
+    linear-gradient(180deg, rgba(21, 41, 32, 0.80) 0%, rgba(31, 59, 52, 0.94) 100%),
+    url('/assets/images/hero-texture-mobile.jpg') center / cover no-repeat,
+    var(--deep-pine);
+  overflow: hidden;
+}
+
+.gform-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(185,138,62,0.45), transparent);
+}
+
+.gform-hero__inner {
+  max-width: var(--gform-wide);
+  margin: 0 auto;
+}
+
+.gform-shell {
+  position: relative;
+  width: 100%;
+  max-width: calc(var(--gform-width) + 2 * var(--gform-gutter));
+  margin: calc(-1 * var(--space-12)) auto 0;
+  padding: 0 var(--gform-gutter) var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.gform-footer {
+  margin-top: auto;
+  padding: var(--space-6) var(--space-4) var(--space-10);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-5);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.gform-footer a {
+  color: var(--deep-pine);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Title (on the pine band) and intro card (the form description)
+   -------------------------------------------------------------------------- */
+
+.gform__title {
+  max-width: 24ch;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 1.15rem + 2.2vw, 2.625rem);
+  font-weight: 400;
+  line-height: 1.18;
+  color: var(--bone);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.gform__title:focus { outline: none; }
+.gform__title:focus-visible { outline: 2px solid var(--brass); outline-offset: 6px; }
+
+.gform-intro {
+  position: relative;
+  background-color: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6) var(--space-5);
+  overflow: hidden;
+}
+
+/* A thin brass rule marks the intro as its own panel. */
+.gform-intro::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brass), var(--brass-light));
+}
+
+.gform-intro:empty,
+.gform-intro[hidden] { display: none !important; }
+
+.gform-shell:has(> .gform-intro[hidden]) {
+  grid-template-columns: minmax(0, var(--gform-width));
+  justify-content: center;
+}
+
+/* After the first section the description steps aside on small screens. */
+.gform-intro.is-collapsed { display: none; }
+
+/* --------------------------------------------------------------------------
+   Formatted text — form description, section descriptions, confirmation
+   -------------------------------------------------------------------------- */
+
+.gform-text {
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+.gform-text p,
+.gform-text li { line-height: inherit; white-space: pre-wrap; }
+
+.gform-text__block + .gform-text__block { margin-top: var(--space-4); }
+
+.gform-text__block--titled {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.gform-text__block--titled + .gform-text__block--titled { margin-top: var(--space-4); }
+
+.gform-text__heading {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--deep-pine);
+}
+
+.gform-text__lead {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--deep-pine);
+}
+
+.gform-text__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.gform-text p + .gform-text__list,
+.gform-text__list + p { margin-top: var(--space-2); }
+
+.gform-text__list li {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr);
+  gap: var(--space-2);
+  align-items: baseline;
+}
+
+.gform-text__marker {
+  text-align: center;
+  font-weight: 700;
+  color: var(--brass);
+}
+
+.gform-text__signature {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.gform-text a {
+  color: var(--deep-pine);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--brass);
+  text-underline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Card
+   -------------------------------------------------------------------------- */
+
+.gform__card {
+  background-color: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-6) var(--space-5);
+  scroll-margin-top: var(--space-4);
+}
+
+.gform__card:focus { outline: none; }
+
+.gform__loading {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: var(--space-12) auto;
+  border: 2px solid var(--gform-line);
+  border-top-color: var(--deep-pine);
+  border-radius: 50%;
+  animation: gformSpin 0.9s linear infinite;
+}
+
+.gform__noscript {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+.gform__noscript a,
+.gform__card a:not(.btn) {
+  color: var(--deep-pine);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.gform__progress {
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(18, 20, 19, 0.08);
+  overflow: hidden;
+  margin-bottom: var(--space-4);
+}
+
+.gform__progress-fill {
+  display: block;
+  height: 100%;
+  background-color: var(--deep-pine);
+  border-radius: 2px;
+  transform-origin: left center;
+  transform: scaleX(0.04);
+  transition: transform 0.35s ease;
+}
+
+.gform__required-note {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+}
+
+.gform__req { color: var(--gform-error); }
+
+/* A non-breaking space keeps a question's asterisk on the line of its last word. */
+.gform__req--after::before { content: '\00a0'; }
+
+.gform__form { display: flex; flex-direction: column; }
+
+.gform__form--enter { animation: gformEnter 0.3s ease both; }
+
+.gform__section-head {
+  padding-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.gform__section-title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-xl), 1.1rem + 1.2vw, var(--text-2xl));
+  font-weight: 400;
+  line-height: var(--leading-snug);
+  color: var(--deep-pine);
+}
+
+.gform__section-title:focus { outline: none; }
+.gform__section-title:focus-visible { outline: 2px solid var(--brass); outline-offset: 4px; }
+
+.gform__section-desc {
+  margin-top: var(--space-3);
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Questions
+   -------------------------------------------------------------------------- */
+
+.gform__item {
+  margin: 0 0 var(--space-8);
+  padding: 0;
+  border: 0;
+  min-width: 0;
+  scroll-margin-top: var(--space-8);
+}
+
+/* Let a legend lay out like any other block. */
+.gform__item > legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+}
+.gform__item > legend + * { clear: both; }
+
+.gform__label {
+  display: block;
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  color: var(--deep-pine);
+  margin-bottom: var(--space-2);
+  overflow-wrap: anywhere;
+}
+
+.gform__help {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.gform__label + .gform__input,
+.gform__label + .gform__textarea,
+.gform__label + .gform__select,
+.gform__label + .gform__options,
+.gform__label + .gform__scale { margin-top: var(--space-3); }
+
+.gform .form-input,
+.gform .form-textarea,
+.gform .form-select {
+  border-color: var(--gform-line);
+  border-radius: var(--radius-lg);
+  min-height: 52px;
+}
+
+.gform .form-input:hover,
+.gform .form-textarea:hover,
+.gform .form-select:hover { border-color: var(--gform-line-strong); }
+
+.gform .form-input:focus,
+.gform .form-textarea:focus,
+.gform .form-select:focus {
+  border-color: var(--deep-pine);
+  box-shadow: 0 0 0 3px rgba(31, 59, 52, 0.12);
+}
+
+.gform__textarea {
+  min-height: 104px;
+  resize: none;
+  overflow: hidden;
+}
+
+.gform__select {
+  padding-right: var(--space-12);
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%231F3B34' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-5) center;
+}
+
+/* Option cards (multiple choice, checkboxes) */
+
+.gform__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.gform__option {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  min-height: 52px;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--white);
+  border: 1px solid var(--gform-line);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.gform__option:hover { border-color: var(--gform-line-strong); }
+
+.gform__option.is-selected {
+  border-color: var(--deep-pine);
+  background-color: var(--gform-selected-bg);
+  box-shadow: inset 0 0 0 1px var(--deep-pine);
+}
+
+.gform__option:has(.gform__control:focus-visible) {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+.gform__option-text {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  color: var(--color-text);
+  overflow-wrap: anywhere;
+}
+
+.gform__option--other .gform__option-text { flex: 0 0 auto; }
+
+.gform__other-input {
+  flex: 1 1 140px;
+  min-width: 0;
+  min-height: 40px;
+  padding: var(--space-2) var(--space-3);
+  border: 0;
+  border-bottom: 1px solid var(--gform-line-strong);
+  border-radius: 0;
+  background: transparent;
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.gform__other-input:focus {
+  outline: none;
+  border-bottom: 2px solid var(--deep-pine);
+}
+
+/* Custom radio and checkbox marks on the native inputs */
+
+.gform__control {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 0 0 auto;
+  display: grid;
+  place-content: center;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  border: 1.5px solid var(--gform-line-strong);
+  background-color: var(--white);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.gform__control[type="radio"] { border-radius: 50%; }
+.gform__control[type="checkbox"] { border-radius: 6px; }
+
+.gform__control::before {
+  content: '';
+  transform: scale(0);
+  transition: transform var(--transition-fast);
+}
+
+.gform__control[type="radio"]::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--deep-pine);
+}
+
+.gform__control[type="checkbox"]::before {
+  width: 12px;
+  height: 12px;
+  background-color: var(--white);
+  clip-path: polygon(14% 44%, 0 59%, 40% 100%, 100% 22%, 86% 8%, 39% 68%);
+}
+
+.gform__control:checked { border-color: var(--deep-pine); }
+.gform__control[type="checkbox"]:checked { background-color: var(--deep-pine); }
+.gform__control:checked::before { transform: scale(1); }
+
+.gform__control:focus { outline: none; }
+.gform__control:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+
+.gform__clear {
+  align-self: flex-end;
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.gform__clear:hover { color: var(--deep-pine); }
+
+/* Linear scale and rating — segmented buttons that wrap at small widths */
+
+.gform__scale {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.gform__scale-option {
+  position: relative;
+  flex: 1 0 44px;
+  max-width: 64px;
+}
+
+.gform__scale-option .gform__control {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.gform__scale-value {
+  display: grid;
+  place-items: center;
+  min-height: 48px;
+  border: 1px solid var(--gform-line);
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  color: var(--deep-pine);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.gform__scale-option:hover .gform__scale-value { border-color: var(--gform-line-strong); }
+
+.gform__scale-option .gform__control:checked + .gform__scale-value {
+  background-color: var(--deep-pine);
+  border-color: var(--deep-pine);
+  color: var(--bone);
+}
+
+.gform__scale-option .gform__control:focus-visible + .gform__scale-value {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+.gform__scale-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.gform__scale-labels span:last-child { text-align: right; }
+
+/* Grids — each row is its own option group */
+
+.gform__grid-row {
+  margin: 0 0 var(--space-4);
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+.gform__grid-row > legend {
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin-bottom: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+.gform__grid-row > legend + * { clear: both; }
+
+.gform__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.gform__chips .gform__option {
+  flex: 1 1 auto;
+  min-height: 48px;
+}
+
+/* Date and time */
+
+.gform__datetime {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.gform__datetime .form-input { width: auto; flex: 1 1 140px; }
+
+/* Display-only blocks and items the page can't reproduce */
+
+.gform__block-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  color: var(--deep-pine);
+  margin-bottom: var(--space-2);
+}
+
+.gform__unsupported {
+  padding: var(--space-4);
+  border: 1px dashed var(--gform-line-strong);
+  border-radius: var(--radius-lg);
+}
+
+/* --------------------------------------------------------------------------
+   Errors
+   -------------------------------------------------------------------------- */
+
+.gform__error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  color: var(--gform-error);
+}
+
+.gform__error[hidden] { display: none; }
+
+.gform__error::before {
+  content: '!';
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background-color: var(--gform-error);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.gform__item.has-error .form-input,
+.gform__item.has-error .form-textarea,
+.gform__item.has-error .form-select,
+.gform__item.has-error .gform__option,
+.gform__item.has-error .gform__scale-value { border-color: var(--clay); }
+
+.gform__alert {
+  margin-bottom: var(--space-5);
+  padding: var(--space-4);
+  border: 1px solid var(--clay);
+  border-radius: var(--radius-lg);
+  background-color: rgba(197, 107, 79, 0.06);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text);
+}
+
+.gform__alert[hidden] { display: none; }
+
+/* Never shown to people; only bots fill it in. */
+.gform__hp {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   Navigation buttons
+   -------------------------------------------------------------------------- */
+
+.gform__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.gform__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 0 var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.gform__back:hover { color: var(--deep-pine); }
+
+.gform__next {
+  justify-content: center;
+  min-height: 48px;
+  min-width: 140px;
+  border-radius: 999px;
+}
+
+.gform__next[disabled] {
+  cursor: progress;
+  opacity: 0.8;
+  transform: none;
+}
+
+.gform__spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(244, 241, 234, 0.35);
+  border-top-color: var(--bone);
+  border-radius: 50%;
+  animation: gformSpin 0.8s linear infinite;
+}
+
+.gform__spinner[hidden] { display: none; }
+
+/* --------------------------------------------------------------------------
+   Thank-you screen
+   -------------------------------------------------------------------------- */
+
+.gform__done {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-6);
+  padding: var(--space-4) 0 var(--space-2);
+}
+
+.gform__done:focus { outline: none; }
+
+.gform__done-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--gform-selected-bg);
+  color: var(--deep-pine);
+}
+
+.gform__confirmation { font-size: 1.0625rem; }
+
+.gform__home { border-radius: 999px; }
+
+/* --------------------------------------------------------------------------
+   Motion and larger screens
+   -------------------------------------------------------------------------- */
+
+@keyframes gformEnter {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes gformSpin {
+  to { transform: rotate(360deg); }
+}
+
+@media (min-width: 640px) {
+  :root { --gform-gutter: var(--space-6); }
+  .gform-hero {
+    padding-top: var(--space-12);
+    background-image:
+      linear-gradient(180deg, rgba(21, 41, 32, 0.80) 0%, rgba(31, 59, 52, 0.94) 100%),
+      url('/assets/images/hero-texture.jpg');
+  }
+  .gform-shell { gap: var(--space-6); }
+  .gform-intro { padding: var(--space-8) var(--space-10); }
+  .gform__card { padding: var(--space-10); }
+}
+
+/* Two columns: the description stays beside the form on every section. */
+@media (min-width: 1024px) {
+  .gform-hero { padding-bottom: calc(var(--space-20) + var(--space-4)); }
+  .gform-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+    gap: var(--space-8);
+    max-width: calc(var(--gform-wide) + 2 * var(--gform-gutter));
+    margin-top: calc(-1 * var(--space-16));
+  }
+  .gform-intro,
+  .gform-intro.is-collapsed {
+    display: block;
+    padding: var(--space-8);
+  }
+  .gform__title { max-width: 34ch; }
+}
+
+@media (max-width: 400px) {
+  .gform__nav { gap: var(--space-2); }
+  .gform__next { flex: 1 1 auto; min-width: 0; padding-left: var(--space-5); padding-right: var(--space-5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gform__form--enter { animation: none; }
+  .gform__progress-fill,
+  .gform__option,
+  .gform__control,
+  .gform__control::before,
+  .gform__scale-value { transition: none; }
+  .gform__spinner,
+  .gform__loading { animation-duration: 2.4s; }
+}

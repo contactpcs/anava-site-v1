@@ -1,0 +1,944 @@
+[
+  null,
+  [
+    "Hello! 👋\n\nPrerna Shah has partnered with Anava Clinics to offer neuromodulation sessions to her clients.\n\n🌿 What is it?\nA gentle, non-invasive therapy that can support calmer mood, lower anxiety and better sleep.\n✔ Works alongside your current therapy and medication\n✔ Nothing you do now needs to change\n\nNeuromodulation uses very gentle stimulation to support the brain's natural \nability to regulate mood, stress and sleep.\n\n- tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.\n- tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.\n\n📝 About this form\n⏱ Takes about 3 minutes\n🔒 Information is shared only with Prerna Shah and the Anava Clinics care team\n\n🔗 Learn more\nAnava Clinics: https://anavaclinics.com\nPrerna Shah: https://prernatherapy.com\n\n— Anava Clinics Pvt Ltd",
+    [
+      [
+        76459341,
+        "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?",
+        "We will never share your information with anyone else.",
+        2,
+        [
+          [
+            1779052522,
+            [
+              [
+                "Yes, I agree",
+                null,
+                -2
+              ],
+              [
+                "No, not right now",
+                null,
+                -3
+              ]
+            ],
+            1
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?"
+        ],
+        [
+          null,
+          "We will never share your information with anyone else."
+        ]
+      ],
+      [
+        298639046,
+        "A little more about you",
+        "We promise to keep this information only to assist in scheduling a consultation, with your consent.",
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "A little more about you<span></span>"
+        ],
+        [
+          null,
+          "We promise to keep this information only to assist in scheduling a consultation, with your consent."
+        ]
+      ],
+      [
+        477463114,
+        "Your name",
+        null,
+        0,
+        [
+          [
+            1405068055,
+            null,
+            1
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Your name"
+        ]
+      ],
+      [
+        1522373540,
+        "Mobile number (WhatsApp preferred)",
+        "10-digit Mobile Number",
+        0,
+        [
+          [
+            1495410094,
+            null,
+            1,
+            null,
+            [
+              [
+                4,
+                301,
+                [
+                  "^(\\+?91[\\s-]?)?[6-9][0-9]{9}$"
+                ],
+                "Please enter a valid 10-digit mobile number, e.g. 9876543210"
+              ]
+            ]
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Mobile number (WhatsApp preferred)"
+        ],
+        [
+          null,
+          "10-digit Mobile Number"
+        ]
+      ],
+      [
+        433956800,
+        "Email (optional)",
+        null,
+        0,
+        [
+          [
+            97786798,
+            null,
+            0,
+            null,
+            [
+              [
+                2,
+                102,
+                null,
+                "Please enter a valid email address"
+              ]
+            ]
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Email (optional)"
+        ]
+      ],
+      [
+        205405954,
+        "Age group",
+        "If you are under 18, please fill this in with a parent or guardian.",
+        3,
+        [
+          [
+            1721151239,
+            [
+              [
+                "Under 18"
+              ],
+              [
+                "18 - 24"
+              ],
+              [
+                "25 - 34"
+              ],
+              [
+                "35 - 44"
+              ],
+              [
+                "45 - 54"
+              ],
+              [
+                "55 - 64"
+              ],
+              [
+                "65 or above"
+              ]
+            ],
+            1
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Age group"
+        ],
+        [
+          null,
+          "If you are under 18, please fill this in with a parent or guardian."
+        ]
+      ],
+      [
+        600317165,
+        "Gender",
+        null,
+        2,
+        [
+          [
+            1304426864,
+            [
+              [
+                "Female"
+              ],
+              [
+                "Male"
+              ],
+              [
+                "Prefer not to say"
+              ],
+              [
+                null,
+                null,
+                null,
+                null,
+                1
+              ]
+            ],
+            0
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Gender"
+        ]
+      ],
+      [
+        841854908,
+        "What would you like support with?",
+        "Select all that apply.",
+        4,
+        [
+          [
+            867970877,
+            [
+              [
+                "Anxiety or constant worry",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Depression or low mood",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Sleep problems",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Focus or concentration / ADHD",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Burnout or low energy",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Overthinking or intrusive thoughts",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Phobia",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Prefer not to say",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "",
+                null,
+                null,
+                null,
+                1
+              ]
+            ],
+            0,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "What would you like support with?"
+        ],
+        [
+          null,
+          "Select all that apply."
+        ]
+      ],
+      [
+        1169949018,
+        "How long have you been experiencing this?",
+        null,
+        3,
+        [
+          [
+            27267739,
+            [
+              [
+                "Less than 3 months"
+              ],
+              [
+                "3 - 12 months"
+              ],
+              [
+                "1 - 3 years"
+              ],
+              [
+                "More than 3 years"
+              ],
+              [
+                "Not sure"
+              ]
+            ],
+            0
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "How long have you been experiencing this?"
+        ]
+      ],
+      [
+        1970358110,
+        "Are you currently taking any medication for your mental health?",
+        "You will not be asked to change or stop any medication.",
+        2,
+        [
+          [
+            382562130,
+            [
+              [
+                "Yes"
+              ],
+              [
+                "No"
+              ],
+              [
+                "Prefer not to say"
+              ]
+            ],
+            1
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Are you currently taking any medication for your mental health?"
+        ],
+        [
+          null,
+          "You will not be asked to change or stop any medication."
+        ]
+      ],
+      [
+        1850105099,
+        "Do any of these apply to you?",
+        "Select all that apply.",
+        4,
+        [
+          [
+            140520283,
+            [
+              [
+                "Pacemaker or other implanted electronic device",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Metal implant in the head or neck (not dental fillings)",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "History of seizures or epilepsy",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Currently pregnant",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Serious head injury or brain surgery in the past",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Heart condition (e.g. irregular heartbeat)",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "Skin condition or wound on the scalp or ears",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "None of these",
+                null,
+                null,
+                null,
+                0
+              ],
+              [
+                "",
+                null,
+                null,
+                null,
+                1
+              ]
+            ],
+            1,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Do any of these apply to you?"
+        ],
+        [
+          null,
+          "Select all that apply."
+        ]
+      ],
+      [
+        1859639582,
+        "About neuromodulation",
+        "Neuromodulation uses very gentle stimulation to support the brain's natural ability to regulate mood, stress and sleep.\n\n- tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.\n- tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.\n\nBoth are non-invasive and work alongside your current therapy and medication. Most people feel only a mild tingling during the session. Sessions are guided by Prerna Shah and the Anava Clinics team.\n\nLearn more: https://anavaclinics.com",
+        8,
+        null,
+        -2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "About neuromodulation"
+        ],
+        [
+          null,
+          "Neuromodulation uses very gentle stimulation to support the brain's natural ability to regulate mood, stress and sleep.<br><br>- tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.<br>- tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.<br><br>Both are non-invasive and work alongside your current therapy and medication. Most people feel only a mild tingling during the session. Sessions are guided by Prerna Shah and the Anava Clinics team.<br><br>Learn more: <a href=\"https://anavaclinics.com\">https://anavaclinics.com</a>"
+        ]
+      ],
+      [
+        2031858634,
+        "Have you heard of neuromodulation before?",
+        null,
+        2,
+        [
+          [
+            1317230633,
+            [
+              [
+                "Yes, and I have tried it"
+              ],
+              [
+                "Yes, but I have not tried it"
+              ],
+              [
+                "No, this is new to me"
+              ]
+            ],
+            1
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Have you heard of neuromodulation before?"
+        ]
+      ],
+      [
+        754235941,
+        "Would you like to try a few neuromodulation sessions?",
+        null,
+        2,
+        [
+          [
+            736354953,
+            [
+              [
+                "Yes, I would like to try it",
+                null,
+                316717201,
+                null,
+                0
+              ],
+              [
+                "Maybe, I would like to know more first",
+                null,
+                316717201,
+                null,
+                0
+              ],
+              [
+                "Not right now",
+                null,
+                812457305,
+                null,
+                0
+              ]
+            ],
+            1,
+            null,
+            null,
+            null,
+            null,
+            null,
+            0
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Would you like to try a few neuromodulation sessions?"
+        ]
+      ],
+      [
+        316717201,
+        "A good time to reach you",
+        "Whether you are ready to start or would like to know more first, the Anava Clinics team will get in touch at a time that suits you. ",
+        8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "A good time to reach you"
+        ],
+        [
+          null,
+          "<span style=\"white-space:pre-wrap\">Whether you are ready to start or would like to know more first, the Anava Clinics team will get in touch at a time that suits you. </span>"
+        ]
+      ],
+      [
+        63975861,
+        "Which days suit you best?",
+        null,
+        2,
+        [
+          [
+            1149319582,
+            [
+              [
+                "Weekdays"
+              ],
+              [
+                "Weekends"
+              ],
+              [
+                "Either works"
+              ]
+            ],
+            1
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Which days suit you best?"
+        ]
+      ],
+      [
+        461177606,
+        "What time of day suits you?",
+        "Select all that apply.",
+        4,
+        [
+          [
+            829148027,
+            [
+              [
+                "Morning (8 am - 12 pm)"
+              ],
+              [
+                "Afternoon (12 - 4 pm)"
+              ],
+              [
+                "Evening (4 - 8 pm)"
+              ]
+            ],
+            1
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "What time of day suits you?"
+        ],
+        [
+          null,
+          "Select all that apply."
+        ]
+      ],
+      [
+        1367847874,
+        "How should we contact you?",
+        null,
+        2,
+        [
+          [
+            939479834,
+            [
+              [
+                "WhatsApp message"
+              ],
+              [
+                "Phone call"
+              ],
+              [
+                "Email"
+              ]
+            ],
+            1
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "How should we contact you?"
+        ]
+      ],
+      [
+        2064035309,
+        "Anything else you would like us to know, or any questions for us?",
+        null,
+        1,
+        [
+          [
+            1638439971,
+            null,
+            0
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Anything else you would like us to know, or any questions for us?"
+        ]
+      ],
+      [
+        812457305,
+        "No problem at all",
+        "Thank you for being open about it. Two quick, optional questions and you are done.",
+        8,
+        null,
+        -3,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "No problem at all"
+        ],
+        [
+          null,
+          "Thank you for being open about it. Two quick, optional questions and you are done."
+        ]
+      ],
+      [
+        2058627025,
+        "What is holding you back?",
+        "Select all that apply.",
+        4,
+        [
+          [
+            45973451,
+            [
+              [
+                "Cost"
+              ],
+              [
+                "Time or scheduling"
+              ],
+              [
+                "Not sure if it is safe"
+              ],
+              [
+                "I would like to learn more first"
+              ],
+              [
+                "I prefer to continue with therapy only"
+              ],
+              [
+                null,
+                null,
+                null,
+                null,
+                1
+              ]
+            ],
+            0
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "What is holding you back?"
+        ],
+        [
+          null,
+          "Select all that apply."
+        ]
+      ],
+      [
+        419811574,
+        "Can we share updates about these sessions with you later?",
+        null,
+        2,
+        [
+          [
+            1903453552,
+            [
+              [
+                "Yes, that is fine"
+              ],
+              [
+                "No, thank you"
+              ]
+            ],
+            0
+          ]
+        ],
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        [
+          null,
+          "Can we share updates about these sessions with you later?"
+        ]
+      ]
+    ],
+    [
+      "Thank you for taking the time to fill this in!\n\nIf you chose to explore sessions, someone from the Anava Clinics team will reach out to you soon to answer your questions. There is no obligation at any point.\n\nLearn more: https://anavaclinics.com  |  https://prernatherapy.com\n\nAnava Clinics Pvt Ltd",
+      0,
+      0,
+      0
+    ],
+    null,
+    null,
+    null,
+    null,
+    null,
+    "Neuromodulation Interest Form : Prerna Shah x Anava Clinics Pvt Ltd",
+    76,
+    [
+      1,
+      null,
+      null,
+      2,
+      null,
+      null,
+      1
+    ],
+    null,
+    null,
+    null,
+    null,
+    [
+      2
+    ],
+    [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      1
+    ],
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+      null,
+      "Hello! 👋<br><br>Prerna Shah has partnered with Anava Clinics to offer neuromodulation sessions to her clients.<br><br>🌿 What is it?<br>A gentle, non-invasive therapy that can support calmer mood, lower anxiety and better sleep.<br>✔ Works alongside your current therapy and medication<br>✔ Nothing you do now needs to change<br><br>Neuromodulation uses very gentle stimulation to support the brain's natural <br>ability to regulate mood, stress and sleep.<br><br>- tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.<br>- tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.<br><br>📝 About this form<br>⏱ Takes about 3 minutes<br>🔒 Information is shared only with Prerna Shah and the Anava Clinics care team<br><br>🔗 Learn more<br>Anava Clinics: <a href=\"https://anavaclinics.com\">https://anavaclinics.com</a><br>Prerna Shah: <a href=\"https://prernatherapy.com\">https://prernatherapy.com</a><br><br>— Anava Clinics Pvt Ltd"
+    ],
+    [
+      null,
+      "Neuromodulation Interest Form : Prerna Shah x Anava Clinics Pvt Ltd<span></span>"
+    ]
+  ],
+  "/forms",
+  "Prerna Shah Therapy x Anava Clinics Pvt Ltd for Neuromodulation",
+  null,
+  null,
+  null,
+  "",
+  null,
+  0,
+  0,
+  null,
+  "PCS",
+  1,
+  "e/1FAIpQLSc1Ooe45dKT0cCarnkrOGZwgVdwNDnZrMKomFOpk-MtCABMpA",
+  0,
+  "[]",
+  0,
+  0,
+  1
+]

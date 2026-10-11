@@ -1,0 +1,262 @@
+Neuromodulation Interest Form : Prerna Shah x Anava Clinics Pvt Ltd
+5 sections · 18 items · form 1FAIpQLSc1Ooe45dKT0cCarnkrOGZwgVdwNDnZrMKomFOpk-MtCABMpA
+
+Form description:
+  | Hello! 👋
+  | 
+  | Prerna Shah has partnered with Anava Clinics to offer neuromodulation sessions to her clients.
+  | 
+  | 🌿 What is it?
+  | A gentle, non-invasive therapy that can support calmer mood, lower anxiety and better sleep.
+  | ✔ Works alongside your current therapy and medication
+  | ✔ Nothing you do now needs to change
+  | 
+  | Neuromodulation uses very gentle stimulation to support the brain's natural 
+  | ability to regulate mood, stress and sleep.
+  | 
+  | - tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.
+  | - tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.
+  | 
+  | 📝 About this form
+  | ⏱ Takes about 3 minutes
+  | 🔒 Information is shared only with Prerna Shah and the Anava Clinics care team
+  | 
+  | 🔗 Learn more
+  | Anava Clinics: https://anavaclinics.com
+  | Prerna Shah: https://prernatherapy.com
+  | 
+  | — Anava Clinics Pvt Ltd
+
+Confirmation message:
+  | Thank you for taking the time to fill this in!
+  | 
+  | If you chose to explore sessions, someone from the Anava Clinics team will reach out to you soon to answer your questions. There is no obligation at any point.
+  | 
+  | Learn more: https://anavaclinics.com  |  https://prernatherapy.com
+  | 
+  | Anava Clinics Pvt Ltd
+
+How this outline was read (FB_PUBLIC_LOAD_DATA_ is undocumented):
+  - Navigation codes: -2 = Continue to next section, -3 = Submit form, a number = the
+    section that starts with that section-break item, not set = Continue (Google default).
+  - "After section N" is stored on the section break that FOLLOWS section N (as in Apps
+    Script's PageBreakItem.getGoToPage()). The last section has none and always submits.
+  - An answer-based jump overrides "After section N". An option set to "Continue to next
+    section" is taken literally (the next section in order). Lines marked ⚠ depend on this.
+  Check each "After section" line and each "→" against the editor.
+
+==============================================================================
+SECTION 1 of 5  (first section: shows the form title and description)
+
+  1.1  Multiple choice · REQUIRED · entry.1779052522 · GO TO SECTION BASED ON ANSWER
+       "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?"
+       Help text:
+         | We will never share your information with anyone else.
+       Options:
+         1. "Yes, I agree"  →  Continue to next section → Section 2  [code -2]
+         2. "No, not right now"  →  Submit form  [code -3]
+
+  After section 1: Continue to next section → Section 2  [not set]
+    (used only when the branching question above is left unanswered)
+
+==============================================================================
+SECTION 2 of 5  · section break item 298639046
+  Title: "A little more about you"
+  Description:
+    | We promise to keep this information only to assist in scheduling a consultation, with your consent.
+
+  2.1  Short answer · REQUIRED · entry.1405068055
+       "Your name"
+
+  2.2  Short answer · REQUIRED · entry.1495410094
+       "Mobile number (WhatsApp preferred)"
+       Help text:
+         | 10-digit Mobile Number
+       Validation: regex / matches "^(\\+?91[\\s-]?)?[6-9][0-9]{9}$"  [codes 4/301]
+           error text: "Please enter a valid 10-digit mobile number, e.g. 9876543210"
+
+  2.3  Short answer · optional · entry.97786798
+       "Email (optional)"
+       Validation: text / email  [codes 2/102]
+           error text: "Please enter a valid email address"
+
+  2.4  Dropdown · REQUIRED · entry.1721151239
+       "Age group"
+       Help text:
+         | If you are under 18, please fill this in with a parent or guardian.
+       Options:
+         1. "Under 18"
+         2. "18 - 24"
+         3. "25 - 34"
+         4. "35 - 44"
+         5. "45 - 54"
+         6. "55 - 64"
+         7. "65 or above"
+
+  2.5  Multiple choice · optional · entry.1304426864
+       "Gender"
+       Options:
+         1. "Female"
+         2. "Male"
+         3. "Prefer not to say"
+         4. Other: (free text)
+
+  2.6  Checkboxes · optional · entry.867970877
+       "What would you like support with?"
+       Help text:
+         | Select all that apply.
+       Options:
+         1. "Anxiety or constant worry"
+         2. "Depression or low mood"
+         3. "Sleep problems"
+         4. "Focus or concentration / ADHD"
+         5. "Burnout or low energy"
+         6. "Overthinking or intrusive thoughts"
+         7. "Phobia"
+         8. "Prefer not to say"
+         9. Other: (free text)
+
+  2.7  Dropdown · optional · entry.27267739
+       "How long have you been experiencing this?"
+       Options:
+         1. "Less than 3 months"
+         2. "3 - 12 months"
+         3. "1 - 3 years"
+         4. "More than 3 years"
+         5. "Not sure"
+
+  2.8  Multiple choice · REQUIRED · entry.382562130
+       "Are you currently taking any medication for your mental health?"
+       Help text:
+         | You will not be asked to change or stop any medication.
+       Options:
+         1. "Yes"
+         2. "No"
+         3. "Prefer not to say"
+
+  2.9  Checkboxes · REQUIRED · entry.140520283
+       "Do any of these apply to you?"
+       Help text:
+         | Select all that apply.
+       Options:
+         1. "Pacemaker or other implanted electronic device"
+         2. "Metal implant in the head or neck (not dental fillings)"
+         3. "History of seizures or epilepsy"
+         4. "Currently pregnant"
+         5. "Serious head injury or brain surgery in the past"
+         6. "Heart condition (e.g. irregular heartbeat)"
+         7. "Skin condition or wound on the scalp or ears"
+         8. "None of these"
+         9. Other: (free text)
+
+  After section 2: Continue to next section → Section 3  [code -2]
+
+==============================================================================
+SECTION 3 of 5  · section break item 1859639582
+  Title: "About neuromodulation"
+  Description:
+    | Neuromodulation uses very gentle stimulation to support the brain's natural ability to regulate mood, stress and sleep.
+    | 
+    | - tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.
+    | - tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.
+    | 
+    | Both are non-invasive and work alongside your current therapy and medication. Most people feel only a mild tingling during the session. Sessions are guided by Prerna Shah and the Anava Clinics team.
+    | 
+    | Learn more: https://anavaclinics.com
+
+  3.1  Multiple choice · REQUIRED · entry.1317230633
+       "Have you heard of neuromodulation before?"
+       Options:
+         1. "Yes, and I have tried it"
+         2. "Yes, but I have not tried it"
+         3. "No, this is new to me"
+
+  3.2  Multiple choice · REQUIRED · entry.736354953 · GO TO SECTION BASED ON ANSWER
+       "Would you like to try a few neuromodulation sessions?"
+       Options:
+         1. "Yes, I would like to try it"  →  Go to Section 4 (A good time to reach you)  [code 316717201]
+         2. "Maybe, I would like to know more first"  →  Go to Section 4 (A good time to reach you)  [code 316717201]
+         3. "Not right now"  →  Go to Section 5 (No problem at all)  [code 812457305]
+
+  After section 3: Continue to next section → Section 4  [not set]
+    (used only when the branching question above is left unanswered)
+
+==============================================================================
+SECTION 4 of 5  · section break item 316717201
+  Title: "A good time to reach you"
+  Description:
+    | Whether you are ready to start or would like to know more first, the Anava Clinics team will get in touch at a time that suits you. 
+
+  4.1  Multiple choice · REQUIRED · entry.1149319582
+       "Which days suit you best?"
+       Options:
+         1. "Weekdays"
+         2. "Weekends"
+         3. "Either works"
+
+  4.2  Checkboxes · REQUIRED · entry.829148027
+       "What time of day suits you?"
+       Help text:
+         | Select all that apply.
+       Options:
+         1. "Morning (8 am - 12 pm)"
+         2. "Afternoon (12 - 4 pm)"
+         3. "Evening (4 - 8 pm)"
+
+  4.3  Multiple choice · REQUIRED · entry.939479834
+       "How should we contact you?"
+       Options:
+         1. "WhatsApp message"
+         2. "Phone call"
+         3. "Email"
+
+  4.4  Paragraph · optional · entry.1638439971
+       "Anything else you would like us to know, or any questions for us?"
+
+  After section 4: Submit form  [code -3]
+
+==============================================================================
+SECTION 5 of 5  · section break item 812457305
+  Title: "No problem at all"
+  Description:
+    | Thank you for being open about it. Two quick, optional questions and you are done.
+
+  5.1  Checkboxes · optional · entry.45973451
+       "What is holding you back?"
+       Help text:
+         | Select all that apply.
+       Options:
+         1. "Cost"
+         2. "Time or scheduling"
+         3. "Not sure if it is safe"
+         4. "I would like to learn more first"
+         5. "I prefer to continue with therapy only"
+         6. Other: (free text)
+
+  5.2  Multiple choice · optional · entry.1903453552
+       "Can we share updates about these sessions with you later?"
+       Options:
+         1. "Yes, that is fine"
+         2. "No, thank you"
+
+  After section 5: Submit form  [last section]
+
+==============================================================================
+PATHS THROUGH THE FORM
+
+  A. Section 1 → 2 → 3 → 4 → Submit form
+     pageHistory=0,1,2,3
+     when "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?" = "Yes, I agree"
+     when "Would you like to try a few neuromodulation sessions?" = "Yes, I would like to try it" or "Maybe, I would like to know more first"
+
+  B. Section 1 → 2 → 3 → 5 → Submit form
+     pageHistory=0,1,2,4
+     when "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?" = "Yes, I agree"
+     when "Would you like to try a few neuromodulation sessions?" = "Not right now"
+
+  C. Section 1 → Submit form
+     pageHistory=0
+     when "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?" = "No, not right now"
+
+==============================================================================
+WARNINGS: none

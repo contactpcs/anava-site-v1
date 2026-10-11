@@ -1,0 +1,16 @@
+{
+  "name": "anavaclinicssite",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "serve": "firebase serve --only hosting --port 5000",
+    "form:sync": "node scripts/sync-neuromodulation-form.mjs",
+    "form:page": "node scripts/sync-neuromodulation-form.mjs --page-only",
+    "form:paths": "node scripts/walk-form-paths.mjs",
+    "form:test-submit": "node scripts/test-form-submit.mjs"
+  }
+}

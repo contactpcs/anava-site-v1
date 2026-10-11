@@ -6,7 +6,25 @@
       "**/.*",
       "**/node_modules/**",
       "design-reference/**",
-      "assets/images/background-for-hero.jpg"
+      "assets/images/background-for-hero.jpg",
+      "package.json",
+      "package-lock.json",
+      "scripts/**",
+      "forms/**",
+      "prompts/**"
+    ],
+    "redirects": [
+      {
+        "source": "/neuromodulation-interest-prerna-shah/",
+        "destination": "/neuromodulation-interest-prerna-shah",
+        "type": 301
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/neuromodulation-interest-prerna-shah",
+        "destination": "/neuromodulation-interest-prerna-shah.html"
+      }
     ],
     "headers": [
       {
