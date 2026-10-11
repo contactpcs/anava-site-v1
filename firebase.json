@@ -4,6 +4,8 @@
     "ignore": [
       "firebase.json",
       "**/.*",
+      ".git/**",
+      "**/.*/**",
       "**/node_modules/**",
       "design-reference/**",
       "assets/images/background-for-hero.jpg",
