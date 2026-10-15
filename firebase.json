@@ -26,6 +26,10 @@
       {
         "source": "/neuromodulation-interest-prerna-shah",
         "destination": "/neuromodulation-interest-prerna-shah.html"
+      },
+      {
+        "source": "/refund-policy",
+        "destination": "/refund-policy.html"
       }
     ],
     "headers": [

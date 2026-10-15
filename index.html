@@ -28,8 +28,8 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/styles.css?v=2220ceaa">
-  <link rel="stylesheet" href="css/components.css?v=dac2ea54">
-  <link rel="stylesheet" href="css/responsive.css?v=802131f2">
+  <link rel="stylesheet" href="css/components.css?v=89c07909">
+  <link rel="stylesheet" href="css/responsive.css?v=b5ddd52d">
 
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/png" href="assets/images/logo.png">
@@ -92,7 +92,10 @@
         <li><a href="contact.html" class="nav__link">Contact</a></li>
       </ul>
 
-      <a href="contact.html" class="nav__cta">Book Consultation</a>
+      <div class="nav__actions">
+        <a href="https://app.anavaclinics.com/login" class="nav__login" title="Patient / Clinic Login"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Login</a>
+        <a href="contact.html" class="nav__cta">Book Consultation</a>
+      </div>
 
       <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="nav__toggle-line"></span>
@@ -111,6 +114,7 @@
     <a href="corporate-wellness.html" class="nav__mobile-link">Corporate</a>
     <a href="locations.html" class="nav__mobile-link">Clinics</a>
     <a href="contact.html" class="nav__mobile-link">Contact</a>
+    <a href="https://app.anavaclinics.com/login" class="nav__mobile-link">Patient / Clinic Login</a>
     <a href="contact.html" class="btn btn--primary nav__mobile-cta">Book a Consultation</a>
   </div>
 
@@ -336,6 +340,8 @@
           </div>
 
         </div>
+
+        <p class="how-it-works__portal reveal">Appointments, assessments and payments are managed securely through our <a href="https://app.anavaclinics.com/login">online portal</a>.</p>
 
       </div>
     </section>
@@ -1207,24 +1213,24 @@
             Where you can find us
           </h2>
           <p class="clinics__subtitle reveal reveal-delay-2">
-            Opening soon in Pune, with further locations planned.
+            Now seeing patients in Pune, with further locations planned.
           </p>
         </div>
 
         <div class="clinics__grid clinics__grid--single">
 
-          <article class="clinic-card clinic-card--announce reveal" aria-label="ANAVA Clinics Pune — opening soon">
+          <article class="clinic-card clinic-card--announce reveal" aria-label="ANAVA Clinics Pune">
             <div class="clinic-card__body">
-              <span class="clinic-card__badge clinic-card__badge--static">Opening Soon</span>
+              <span class="clinic-card__badge clinic-card__badge--static">Now Open</span>
               <h3 class="clinic-card__name">Pune</h3>
               <p class="clinic-card__announce-text">
-                Our first clinic opens in Pune soon. Register your interest to be notified.
+                Consultations, assessments and tDCS / tVNS sessions are available in Pune. Get in touch and we will book you in at your nearest ANAVA clinic.
               </p>
               <p class="clinic-card__announce-note">
-                We will share the address and opening date once the clinic is confirmed.
+                Clinic address and timings are shared when your appointment is confirmed.
               </p>
               <div class="clinic-card__actions">
-                <a href="contact.html" class="btn btn--pine">Register Interest</a>
+                <a href="contact.html" class="btn btn--pine">Book a Consultation</a>
               </div>
             </div>
           </article>
@@ -1373,6 +1379,18 @@
             </div>
           </div>
 
+          <div class="faq-item reveal reveal-delay-5" role="listitem">
+            <button class="faq-item__btn" aria-expanded="false" aria-controls="faq-7">
+              How much does a session cost?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__answer" id="faq-7" role="region">
+              <div class="faq-item__answer-inner">
+                tDCS sessions start at ₹1,500 per session. Your treatment plan and final fees are confirmed after a clinical assessment at your nearest ANAVA clinic. Payment plans and concessions may be available. Fees are inclusive of applicable taxes. See our <a href="refund-policy.html">Cancellation &amp; Refund Policy</a> for how cancellations and rescheduling work.
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -1436,7 +1454,7 @@
           <p class="footer__tagline">
             "Safe. Non-invasive. Designed for people who've been searching for a better way."
           </p>
-          <div class="footer__office"><span class="footer__office-label">Registered Office</span><address class="footer__office-address">One North Apartment, H1601,<br>Magarpatta, Hadapsar I.E.,<br>Pune City, Pune 411013,<br>Maharashtra, India</address><p class="footer__cin">CIN: U86904PN2026PTC260599</p></div>
+          <div class="footer__office"><span class="footer__office-label">Registered Office</span><address class="footer__office-address">One North Apartment, H1601,<br>Magarpatta, Hadapsar I.E.,<br>Pune City, Pune 411013,<br>Maharashtra, India</address><p class="footer__cin">ANAVA Clinics Private Limited<br>CIN: U86904PN2026PTC260599<br>GSTIN: 27ABGCA7916F1ZL</p></div>
           <div class="footer__social" aria-label="Social media links"><a href="https://www.linkedin.com/company/anava-clinics" class="footer__social-link" aria-label="ANAVA Clinics on LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
         </div>
 
@@ -1471,6 +1489,7 @@
             <li><a href="tel:+917249310743" class="footer__link">+91 724-9310743</a></li>
             <li><a href="contact.html#offices" class="footer__link">Registered Office</a></li>
             <li><a href="contact.html" class="footer__link">General enquiries</a></li>
+            <li><a href="https://app.anavaclinics.com/login" class="footer__link">Patient / Clinic Login</a></li>
           </ul>
           <span class="footer__col-title" style="margin-top:var(--space-10);">Forms</span>
           <ul class="footer__links" role="list">
@@ -1486,7 +1505,9 @@
         <div class="footer__legal">
           <a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a>
           <a href="terms-of-use.html" class="footer__legal-link">Terms of Use</a>
+          <a href="refund-policy.html" class="footer__legal-link">Cancellation &amp; Refund Policy</a>
           <a href="medical-disclaimer.html" class="footer__legal-link">Medical Disclaimer</a>
+          <a href="privacy-policy.html#grievance" class="footer__legal-link">Grievance</a>
         </div>
       </div>
 

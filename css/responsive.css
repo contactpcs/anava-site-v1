@@ -21,6 +21,8 @@
   .nav__cta {
     padding: var(--space-3) var(--space-5);
   }
+
+  .nav__actions { gap: var(--space-4); }
 }
 
 @media (max-width: 1023px) {
@@ -71,7 +73,8 @@
   }
 
   .nav__links,
-  .nav__cta { display: none; }
+  .nav__cta,
+  .nav__login { display: none; }
 
   .nav__toggle { display: flex; }
 

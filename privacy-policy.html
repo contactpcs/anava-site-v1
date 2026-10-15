@@ -24,8 +24,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="css/styles.css?v=2220ceaa">
-  <link rel="stylesheet" href="css/components.css?v=dac2ea54">
-  <link rel="stylesheet" href="css/responsive.css?v=802131f2">
+  <link rel="stylesheet" href="css/components.css?v=89c07909">
+  <link rel="stylesheet" href="css/responsive.css?v=b5ddd52d">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <style>
     .legal { max-width: 800px; }
@@ -101,7 +101,10 @@
         <li><a href="locations.html" class="nav__link">Clinics</a></li>
         <li><a href="contact.html" class="nav__link">Contact</a></li>
       </ul>
-      <a href="contact.html" class="nav__cta">Book Consultation</a>
+      <div class="nav__actions">
+        <a href="https://app.anavaclinics.com/login" class="nav__login" title="Patient / Clinic Login"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Login</a>
+        <a href="contact.html" class="nav__cta">Book Consultation</a>
+      </div>
       <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <span class="nav__toggle-line"></span>
         <span class="nav__toggle-line"></span>
@@ -117,6 +120,7 @@
     <a href="corporate-wellness.html" class="nav__mobile-link">Corporate</a>
     <a href="locations.html" class="nav__mobile-link">Clinics</a>
     <a href="contact.html" class="nav__mobile-link">Contact</a>
+    <a href="https://app.anavaclinics.com/login" class="nav__mobile-link">Patient / Clinic Login</a>
     <a href="contact.html" class="btn btn--primary nav__mobile-cta">Book a Consultation</a>
   </div>
 
@@ -138,7 +142,7 @@
       <div class="container">
         <div class="legal">
 
-          <p class="legal__meta">Last updated: 28 September 2026 &nbsp;·&nbsp; Effective: 28 September 2026</p>
+          <p class="legal__meta">Last updated: 15 October 2026 &nbsp;·&nbsp; Effective: 15 October 2026</p>
 
           <div class="legal__box">
             <p><strong>Who we are.</strong> This Privacy Policy is issued by <strong>ANAVA Clinics Private Limited</strong> ("ANAVA Clinics", "we", "us", "our"), a company incorporated under the Companies Act, 2013 (CIN: U86904PN2026PTC260599), with its registered office at One North Apartment, H1601, Magarpatta, Hadapsar I.E., Pune City, Pune 411013, Maharashtra, India.</p>
@@ -214,7 +218,7 @@
           <p>We process your personal data for the following purposes, and no others without your further consent:</p>
           <ul>
             <li><strong>To respond to your enquiry</strong> &mdash; to contact you, answer your questions, and assess whether our services are appropriate for you.</li>
-            <li><strong>To register and act on your interest</strong> in a clinic that has not yet opened, and to notify you when it does.</li>
+            <li><strong>To book and manage appointments</strong> &mdash; scheduling, reminders, rescheduling, cancellations, payments and refunds.</li>
             <li><strong>To provide care and services</strong> &mdash; to assess, plan, deliver, record and follow up treatment, and to coordinate with a treating clinician.</li>
             <li><strong>To operate and secure our software platform</strong> &mdash; authentication, access control, audit logging, backup, and incident investigation.</li>
             <li><strong>To meet legal and regulatory obligations</strong> &mdash; including record-keeping, tax, and responding to lawful requests from authorities.</li>
@@ -229,7 +233,7 @@
           <p>We do <strong>not</strong> sell, rent or trade your personal data. We share it only in the following circumstances:</p>
           <ul>
             <li><strong>Treating clinicians and affiliated specialists</strong> &mdash; where it is necessary for your care, and with your knowledge.</li>
-            <li><strong>Data processors acting on our instructions</strong> &mdash; cloud hosting, email delivery, and similar service providers, each bound by a written agreement that limits them to processing on our instructions, requires appropriate security, and prohibits use of your data for their own purposes.</li>
+            <li><strong>Data processors acting on our instructions</strong> &mdash; cloud hosting, email delivery, payment processing, and similar service providers, each bound by a written agreement that limits them to processing on our instructions, requires appropriate security, and prohibits use of your data for their own purposes.</li>
             <li><strong>Professional advisers</strong> &mdash; auditors, lawyers and insurers, where relevant and under a duty of confidence.</li>
             <li><strong>Authorities</strong> &mdash; where disclosure is required by law, by an order of a court, or by a competent authority acting under statutory powers.</li>
             <li><strong>In a corporate transaction</strong> &mdash; if our business is reorganised, merged or acquired, subject to the acquirer being bound to this Policy or a policy no less protective; we will notify you of any material change.</li>
@@ -256,7 +260,7 @@
           <h2 id="retention">9. How long we keep your data</h2>
           <ul>
             <li><strong>Enquiries that do not lead to care</strong> &mdash; retained for up to 24 months from your last contact with us, then deleted or anonymised.</li>
-            <li><strong>Registrations of interest</strong> &mdash; retained until the clinic opens and we have notified you, or until you withdraw, whichever is earlier.</li>
+            <li><strong>Registrations of interest</strong> &mdash; retained until we have followed up on your interest, or until you withdraw, whichever is earlier.</li>
             <li><strong>Clinical and treatment records</strong> &mdash; retained for the period required by applicable medical record-keeping requirements and by the law of limitation, and no longer than necessary thereafter.</li>
             <li><strong>Consent and withdrawal records</strong> &mdash; retained for as long as needed to evidence our compliance.</li>
             <li><strong>Accounting and tax records</strong> &mdash; retained for the period required by law.</li>
@@ -331,17 +335,17 @@
         <div class="footer__brand">
           <div class="footer__logo"><img src="assets/images/logo.png" alt="ANAVA Clinics" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"><span class="footer__logo-text" style="display:none;">ANAVA</span></div>
           <p class="footer__tagline">"Safe. Non-invasive. Designed for people who've been searching for a better way."</p>
-          <div class="footer__office"><span class="footer__office-label">Registered Office</span><address class="footer__office-address">One North Apartment, H1601,<br>Magarpatta, Hadapsar I.E.,<br>Pune City, Pune 411013,<br>Maharashtra, India</address><p class="footer__cin">CIN: U86904PN2026PTC260599</p></div>
+          <div class="footer__office"><span class="footer__office-label">Registered Office</span><address class="footer__office-address">One North Apartment, H1601,<br>Magarpatta, Hadapsar I.E.,<br>Pune City, Pune 411013,<br>Maharashtra, India</address><p class="footer__cin">ANAVA Clinics Private Limited<br>CIN: U86904PN2026PTC260599<br>GSTIN: 27ABGCA7916F1ZL</p></div>
           <div class="footer__social" aria-label="Social media links"><a href="https://www.linkedin.com/company/anava-clinics" class="footer__social-link" aria-label="ANAVA Clinics on LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a></div>
         </div>
         <nav aria-label="Treatments"><span class="footer__col-title">Treatments</span><ul class="footer__links"><li><a href="treatments.html#tdcs" class="footer__link">tDCS</a></li><li><a href="treatments.html#tvns" class="footer__link">tVNS</a></li><li><a href="treatments.html#tms" class="footer__link">TMS</a></li><li><a href="treatments.html#tps" class="footer__link">TPS</a></li><li><a href="conditions.html" class="footer__link">Conditions we treat</a></li></ul></nav>
         <nav aria-label="Company"><span class="footer__col-title">ANAVA</span><ul class="footer__links"><li><a href="about.html" class="footer__link">Our Story</a></li><li><a href="about.html#network" class="footer__link">Clinical Team</a></li><li><a href="platform.html" class="footer__link">Our Platform</a></li><li><a href="corporate-wellness.html" class="footer__link">Corporate Wellness</a></li><li><a href="locations.html" class="footer__link">Clinics</a></li><li><a href="contact.html" class="footer__link">Book a Consultation</a></li></ul></nav>
-        <div><span class="footer__col-title">Contact</span><ul class="footer__links"><li><a href="mailto:contact@anavaclinics.com" class="footer__link">contact@anavaclinics.com</a></li><li><a href="tel:+917249310743" class="footer__link">+91 724-9310743</a></li><li><a href="contact.html#offices" class="footer__link">Registered Office</a></li><li><a href="contact.html" class="footer__link">General enquiries</a></li></ul><span class="footer__col-title" style="margin-top:var(--space-10);">Forms</span><ul class="footer__links" role="list"><li><a href="neuromodulation-interest-prerna-shah" class="footer__link">Neuromodulation Interest Form</a></li></ul></div>
+        <div><span class="footer__col-title">Contact</span><ul class="footer__links"><li><a href="mailto:contact@anavaclinics.com" class="footer__link">contact@anavaclinics.com</a></li><li><a href="tel:+917249310743" class="footer__link">+91 724-9310743</a></li><li><a href="contact.html#offices" class="footer__link">Registered Office</a></li><li><a href="contact.html" class="footer__link">General enquiries</a></li><li><a href="https://app.anavaclinics.com/login" class="footer__link">Patient / Clinic Login</a></li></ul><span class="footer__col-title" style="margin-top:var(--space-10);">Forms</span><ul class="footer__links" role="list"><li><a href="neuromodulation-interest-prerna-shah" class="footer__link">Neuromodulation Interest Form</a></li></ul></div>
       </div>
       <div class="footer__bottom">
         <p class="footer__copyright">&copy; 2026 ANAVA Clinics Pvt Ltd. All rights reserved.</p>
         <p class="footer__motto">When medicine alone wasn't enough.</p>
-        <div class="footer__legal"><a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a><a href="terms-of-use.html" class="footer__legal-link">Terms of Use</a><a href="medical-disclaimer.html" class="footer__legal-link">Medical Disclaimer</a></div>
+        <div class="footer__legal"><a href="privacy-policy.html" class="footer__legal-link">Privacy Policy</a><a href="terms-of-use.html" class="footer__legal-link">Terms of Use</a><a href="refund-policy.html" class="footer__legal-link">Cancellation &amp; Refund Policy</a><a href="medical-disclaimer.html" class="footer__legal-link">Medical Disclaimer</a><a href="privacy-policy.html#grievance" class="footer__legal-link">Grievance</a></div>
       </div>
     </div>
   </footer>
