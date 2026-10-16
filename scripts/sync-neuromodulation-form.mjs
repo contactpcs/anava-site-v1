@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Pulls the live "Neuromodulation Interest Form : Prerna Shah x Anava Clinics"
+// Pulls the live "Neuromodulation Interest Form : Anava Clinics Pvt Ltd"
 // Google Form and regenerates everything the form page renders from.
 //
 //   npm run form:sync                    fetch the live form, update forms/ and the page
@@ -11,7 +11,7 @@
 //   neuromodulation-interest.raw.json      FB_PUBLIC_LOAD_DATA_ exactly as Google serves it
 //   neuromodulation-interest.schema.json   normalized schema (the page's only source of text)
 //   neuromodulation-interest.outline.txt   readable outline; `git diff forms/` after a re-sync
-// and updates neuromodulation-interest-prerna-shah.html (meta tags, embedded
+// and updates neuromodulation-interest.html (meta tags, embedded
 // schema, asset ?v= hashes).
 
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
@@ -33,7 +33,7 @@ const SUBMIT_URL = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'forms', 'neuromodulation-interest');
-const PAGE = path.join(ROOT, 'neuromodulation-interest-prerna-shah.html');
+const PAGE = path.join(ROOT, 'neuromodulation-interest.html');
 
 const args = process.argv.slice(2);
 const pageOnly = args.includes('--page-only');

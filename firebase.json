@@ -17,15 +17,30 @@
     ],
     "redirects": [
       {
+        "source": "/neuromodulation-interest-prerna-shah",
+        "destination": "/neuromodulation-interest",
+        "type": 301
+      },
+      {
         "source": "/neuromodulation-interest-prerna-shah/",
-        "destination": "/neuromodulation-interest-prerna-shah",
+        "destination": "/neuromodulation-interest",
+        "type": 301
+      },
+      {
+        "source": "/neuromodulation-interest-prerna-shah.html",
+        "destination": "/neuromodulation-interest",
+        "type": 301
+      },
+      {
+        "source": "/neuromodulation-interest/",
+        "destination": "/neuromodulation-interest",
         "type": 301
       }
     ],
     "rewrites": [
       {
-        "source": "/neuromodulation-interest-prerna-shah",
-        "destination": "/neuromodulation-interest-prerna-shah.html"
+        "source": "/neuromodulation-interest",
+        "destination": "/neuromodulation-interest.html"
       },
       {
         "source": "/refund-policy",

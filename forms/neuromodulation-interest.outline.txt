@@ -1,10 +1,10 @@
-Neuromodulation Interest Form : Prerna Shah x Anava Clinics Pvt Ltd
+Neuromodulation Interest Form : Anava Clinics Pvt Ltd
 5 sections · 18 items · form 1FAIpQLSc1Ooe45dKT0cCarnkrOGZwgVdwNDnZrMKomFOpk-MtCABMpA
 
 Form description:
   | Hello! 👋
   | 
-  | Prerna Shah has partnered with Anava Clinics to offer neuromodulation sessions to her clients.
+  | Anava Clinics offers gentle, non-invasive neuromodulation sessions to support your wellbeing.
   | 
   | 🌿 What is it?
   | A gentle, non-invasive therapy that can support calmer mood, lower anxiety and better sleep.
@@ -19,20 +19,19 @@ Form description:
   | 
   | 📝 About this form
   | ⏱ Takes about 3 minutes
-  | 🔒 Information is shared only with Prerna Shah and the Anava Clinics care team
+  | 🔒 Information is shared only with Anava Clinics care team
   | 
   | 🔗 Learn more
   | Anava Clinics: https://anavaclinics.com
-  | Prerna Shah: https://prernatherapy.com
   | 
   | — Anava Clinics Pvt Ltd
 
 Confirmation message:
   | Thank you for taking the time to fill this in!
   | 
-  | If you chose to explore sessions, someone from the Anava Clinics team will reach out to you soon to answer your questions. There is no obligation at any point.
+  | If you chose to explore sessions, someone from the Anava Clinics team will reach out to you soon to answer your questions.
   | 
-  | Learn more: https://anavaclinics.com  |  https://prernatherapy.com
+  | Learn more: https://anavaclinics.com
   | 
   | Anava Clinics Pvt Ltd
 
@@ -49,7 +48,7 @@ How this outline was read (FB_PUBLIC_LOAD_DATA_ is undocumented):
 SECTION 1 of 5  (first section: shows the form title and description)
 
   1.1  Multiple choice · REQUIRED · entry.1779052522 · GO TO SECTION BASED ON ANSWER
-       "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?"
+       "Are you happy to share your details with Anava Clinics so we can contact you about the sessions?"
        Help text:
          | We will never share your information with anyone else.
        Options:
@@ -160,7 +159,7 @@ SECTION 3 of 5  · section break item 1859639582
     | - tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.
     | - tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.
     | 
-    | Both are non-invasive and work alongside your current therapy and medication. Most people feel only a mild tingling during the session. Sessions are guided by Prerna Shah and the Anava Clinics team.
+    | Both are non-invasive and work alongside your current therapy and medication. Most people feel only a mild tingling during the session. Sessions are guided by Anava Clinics team.
     | 
     | Learn more: https://anavaclinics.com
 
@@ -246,17 +245,17 @@ PATHS THROUGH THE FORM
 
   A. Section 1 → 2 → 3 → 4 → Submit form
      pageHistory=0,1,2,3
-     when "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?" = "Yes, I agree"
+     when "Are you happy to share your details with Anava Clinics so we can contact you about the sessions?" = "Yes, I agree"
      when "Would you like to try a few neuromodulation sessions?" = "Yes, I would like to try it" or "Maybe, I would like to know more first"
 
   B. Section 1 → 2 → 3 → 5 → Submit form
      pageHistory=0,1,2,4
-     when "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?" = "Yes, I agree"
+     when "Are you happy to share your details with Anava Clinics so we can contact you about the sessions?" = "Yes, I agree"
      when "Would you like to try a few neuromodulation sessions?" = "Not right now"
 
   C. Section 1 → Submit form
      pageHistory=0
-     when "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?" = "No, not right now"
+     when "Are you happy to share your details with Anava Clinics so we can contact you about the sessions?" = "No, not right now"
 
 ==============================================================================
 WARNINGS: none

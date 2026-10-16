@@ -1,11 +1,11 @@
 {
-  "title": "Neuromodulation Interest Form : Prerna Shah x Anava Clinics Pvt Ltd",
-  "description": "Hello! 👋\n\nPrerna Shah has partnered with Anava Clinics to offer neuromodulation sessions to her clients.\n\n🌿 What is it?\nA gentle, non-invasive therapy that can support calmer mood, lower anxiety and better sleep.\n✔ Works alongside your current therapy and medication\n✔ Nothing you do now needs to change\n\nNeuromodulation uses very gentle stimulation to support the brain's natural \nability to regulate mood, stress and sleep.\n\n- tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.\n- tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.\n\n📝 About this form\n⏱ Takes about 3 minutes\n🔒 Information is shared only with Prerna Shah and the Anava Clinics care team\n\n🔗 Learn more\nAnava Clinics: https://anavaclinics.com\nPrerna Shah: https://prernatherapy.com\n\n— Anava Clinics Pvt Ltd",
-  "confirmationMessage": "Thank you for taking the time to fill this in!\n\nIf you chose to explore sessions, someone from the Anava Clinics team will reach out to you soon to answer your questions. There is no obligation at any point.\n\nLearn more: https://anavaclinics.com  |  https://prernatherapy.com\n\nAnava Clinics Pvt Ltd",
+  "title": "Neuromodulation Interest Form : Anava Clinics Pvt Ltd",
+  "description": "Hello! 👋\n\nAnava Clinics offers gentle, non-invasive neuromodulation sessions to support your wellbeing.\n\n🌿 What is it?\nA gentle, non-invasive therapy that can support calmer mood, lower anxiety and better sleep.\n✔ Works alongside your current therapy and medication\n✔ Nothing you do now needs to change\n\nNeuromodulation uses very gentle stimulation to support the brain's natural \nability to regulate mood, stress and sleep.\n\n- tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.\n- tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.\n\n📝 About this form\n⏱ Takes about 3 minutes\n🔒 Information is shared only with Anava Clinics care team\n\n🔗 Learn more\nAnava Clinics: https://anavaclinics.com\n\n— Anava Clinics Pvt Ltd",
+  "confirmationMessage": "Thank you for taking the time to fill this in!\n\nIf you chose to explore sessions, someone from the Anava Clinics team will reach out to you soon to answer your questions.\n\nLearn more: https://anavaclinics.com\n\nAnava Clinics Pvt Ltd",
   "formId": "1FAIpQLSc1Ooe45dKT0cCarnkrOGZwgVdwNDnZrMKomFOpk-MtCABMpA",
   "viewUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc1Ooe45dKT0cCarnkrOGZwgVdwNDnZrMKomFOpk-MtCABMpA/viewform",
   "submitUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc1Ooe45dKT0cCarnkrOGZwgVdwNDnZrMKomFOpk-MtCABMpA/formResponse",
-  "fbzx": "-384356836689602531",
+  "fbzx": "9108099662706619126",
   "sections": [
     {
       "index": 0,
@@ -21,7 +21,7 @@
           "itemId": 76459341,
           "type": "multiple_choice",
           "typeCode": 2,
-          "title": "Are you happy to share your details with Prerna Shah and Anava Clinics so we can contact you about the sessions?",
+          "title": "Are you happy to share your details with Anava Clinics so we can contact you about the sessions?",
           "help": "We will never share your information with anyone else.",
           "entryId": 1779052522,
           "required": true,
@@ -377,7 +377,7 @@
       "index": 2,
       "id": 1859639582,
       "title": "About neuromodulation",
-      "description": "Neuromodulation uses very gentle stimulation to support the brain's natural ability to regulate mood, stress and sleep.\n\n- tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.\n- tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.\n\nBoth are non-invasive and work alongside your current therapy and medication. Most people feel only a mild tingling during the session. Sessions are guided by Prerna Shah and the Anava Clinics team.\n\nLearn more: https://anavaclinics.com",
+      "description": "Neuromodulation uses very gentle stimulation to support the brain's natural ability to regulate mood, stress and sleep.\n\n- tDCS: a soft headband with two damp sponge pads delivers a very mild current for about 20 - 30 minutes.\n- tVNS: a small ear clip gently stimulates a nerve linked to calm and relaxation.\n\nBoth are non-invasive and work alongside your current therapy and medication. Most people feel only a mild tingling during the session. Sessions are guided by Anava Clinics team.\n\nLearn more: https://anavaclinics.com",
       "next": {
         "type": "continue",
         "raw": null
