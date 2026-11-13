@@ -13,7 +13,8 @@
       "package-lock.json",
       "scripts/**",
       "forms/**",
-      "prompts/**"
+      "prompts/**",
+      "qr/**"
     ],
     "redirects": [
       {
@@ -35,6 +36,11 @@
         "source": "/neuromodulation-interest/",
         "destination": "/neuromodulation-interest",
         "type": 301
+      },
+      {
+        "source": "/summit/",
+        "destination": "/summit",
+        "type": 301
       }
     ],
     "rewrites": [
@@ -45,9 +51,22 @@
       {
         "source": "/refund-policy",
         "destination": "/refund-policy.html"
+      },
+      {
+        "source": "/summit",
+        "destination": "/summit.html"
       }
     ],
     "headers": [
+      {
+        "source": "/summit{,.html}",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          }
+        ]
+      },
       {
         "source": "/",
         "headers": [
